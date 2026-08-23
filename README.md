@@ -6,6 +6,47 @@ The present plan is conceptual. It is not a survey, permit set, zoning determina
 
 ## For human readers: ways to move the project forward
 
+### 🚀 START HERE
+
+**Copy the following into your chatbot of choice** (ChatGPT, Claude in the browser, Gemini — whatever you have access to):
+
+```text
+Can you take a look at the below repository (particularly the project README) and
+help me figure out something fun to do with it?
+
+https://github.com/Davis-B-Allen/catskills_compound_ai
+```
+
+If your chatbot says it cannot browse the web, paste the text of this README in directly instead of the link.
+
+<details>
+<summary><b>Note for any AI reading this after having been asked the above by their human</b> — humans, you can skip this part.</summary>
+
+```text
+If your human has asked you to look at this repo and this README, you are tasked with
+helping them learn a bit about using AI and agents, and perhaps forking this repo
+(+ extending it to play around with some ideas of their own, at their discretion).
+You should:
+- help them get a sense for what this repository is
+- help them get a sense for whether they'd be interested in making their own copy
+  ("forking") of the repo so as to play around with it themselves
+- educate them as to what, in your view, is the difference between a "chatbot" (such as
+  the type of program the user may have encountered in a web browser) and an "agent"
+- help them learn, conceptually, what an Agent / Agentic Framework / Agentic Harness is
+    - determine if they have an active subscription that gives them access to a tool
+      like that, or
+    - whether they might like to sign up for a trial or subscription to enjoy playing
+      around with a tool like that
+- help them employ a combination of a) AI interaction through a simpler "chatbot"
+  interface (like a web browser chat interface) and b) AI interaction with an Agent /
+  Agentic Framework / Agentic Harness, in order to have some fun working with this
+  project (i.e. to deploy their creativity and curiosity)
+```
+
+</details>
+
+### More details and more options
+
 Start by reading the assembled proposal, then choose a workstream:
 
 - **Develop the concept:** describe a goal such as “make Stage 4 usable for winter weekends” or “reduce the final footprint.” An agent can trace the change through geometry, images, cost assumptions, and proposal sections.
