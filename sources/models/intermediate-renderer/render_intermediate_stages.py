@@ -1,9 +1,14 @@
 import vtk, math, random, os
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 from shapely.geometry import Polygon, Point
 from shapely.ops import unary_union, triangulate
 
-OUT=os.environ.get('CATSKILLS_INTERMEDIATE_OUT', os.path.join(os.path.dirname(__file__), 'generated_intermediate'))
+REPO_ROOT = Path(__file__).resolve().parents[3]
+OUT = os.environ.get(
+    'CATSKILLS_INTERMEDIATE_OUT',
+    str(REPO_ROOT / 'sources' / 'images' / 'generated' / 'intermediate'),
+)
 os.makedirs(OUT,exist_ok=True)
 random.seed(7)
 

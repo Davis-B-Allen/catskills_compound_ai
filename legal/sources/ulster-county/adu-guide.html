@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+<head>
+	<!-- Published by OpenCities, 1.37.5.1 -->
+
+    
+        
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="theme-color" content="#FFFFFF"/>
+    <title>Building an ADU in Ulster County - Ulster County</title>
+	<meta name="generator" content="OpenCities - https://granicus.com/product/opencities" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using mobile-web-app-capable for now to enable full-screen experience on supported platforms -->
+    <!-- Note: This tag works mainly on Android Chrome. It does NOT enable full-screen mode on iOS Safari. -->
+    <!-- For iOS, the correct tag is: <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <!-- TODO: Monitor for updated meta tag standards from Apple or other browser vendors -->
+    <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="description" content="An accessory dwelling unit (ADU) is a self-contained residential unit on the same property as a single-family home — a basement apartment, a garage conversion, a backyard cottage, or an in-law suite. This guide walks homeowners through every stage of the process, from..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.ulstercountyny.gov/Departments/Planning/Housing/ADU-Guide" />
+    <meta property="og:title" content="Building an ADU in Ulster County" />
+    <meta property="og:description" content="An accessory dwelling unit (ADU) is a self-contained residential unit on the same property as a single-family home — a basement apartment, a garage conversion, a backyard cottage, or an in-law suite. This guide walks homeowners through every stage of the process, from..." />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Building an ADU in Ulster County" />
+    <meta property="twitter:description" content="An accessory dwelling unit (ADU) is a self-contained residential unit on the same property as a single-family home — a basement apartment, a garage conversion, a backyard cottage, or an in-law suite. This guide walks homeowners through every stage of the process, from..." />
+    <link rel="canonical" href="https://www.ulstercountyny.gov/Departments/Planning/Housing/ADU-Guide" />
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/files/ocfavicon/Countysite/apple-touch-icon.png?V=638488832585475295">
+<link rel="icon" type="image/png" sizes="32x32" href="/files/ocfavicon/Countysite/favicon-32x32.png?V=638488832585475295">
+<link rel="icon" type="image/png" sizes="16x16" href="/files/ocfavicon/Countysite/favicon-16x16.png?V=638488832585475295">
+<link rel="manifest" href="/files/ocfavicon/Countysite/site.webmanifest?V=638488832585475295">
+<link rel="shortcut icon" href="/files/ocfavicon/Countysite/favicon.ico?V=638488832585475295">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-config" content="/files/ocfavicon/Countysite/browserconfig.xml?V=638488832585475295">
+    <script>
+        (function () {
+            if (window.__UNLOAD_LAZY_PATCH__) return;
+            window.__UNLOAD_LAZY_PATCH__ = true;
+
+            var supportsPageHide = ("onpagehide" in window);
+            var mappedType = supportsPageHide ? "pagehide" : "beforeunload";
+            var nativeAdd = window.addEventListener;
+            var nativeRemove = window.removeEventListener;
+            var unloadMap = null;
+            var patched = false;
+
+            function ensurePatched() {
+                if (patched) return;
+                unloadMap = new WeakMap();
+
+                window.addEventListener = function (type, listener, options) {
+                    if (type === "unload") {
+                        var wrapped = function (evt) {
+                            if (supportsPageHide && evt.persisted) return;
+                            listener.call(this, evt);
+                        };
+                        unloadMap.set(listener, wrapped);
+                        return nativeAdd.call(this, mappedType, wrapped, options);
+                    }
+                    return nativeAdd.call(this, type, listener, options);
+                };
+
+                window.removeEventListener = function (type, listener, options) {
+                    if (type === "unload") {
+                        var wrapped = unloadMap.get(listener);
+                        if (wrapped) {
+                            nativeRemove.call(this, mappedType, wrapped, options);
+                            unloadMap.delete(listener);
+                        }
+                        return;
+                    }
+                    return nativeRemove.call(this, type, listener, options);
+                };
+
+                var orig = null;
+                Object.defineProperty(window, "onunload", {
+                    configurable: true, enumerable: true,
+                    get: function () { return orig; },
+                    set: function (h) {
+                        orig = h;
+                        if (typeof h === "function") window.addEventListener("unload", h);
+                    }
+                });
+                patched = true;
+            }
+
+            window.addEventListener = function (type, listener, options) {
+                if (type === "unload") {
+                    ensurePatched();
+                    return window.addEventListener(type, listener, options);
+                }
+                return nativeAdd.call(this, type, listener, options);
+            };
+
+            window.removeEventListener = function (type, listener, options) {
+                if (type === "unload" && !patched) {
+                    return;
+                }
+                return nativeRemove.call(this, type, listener, options);
+            };
+
+            function patchTelerik() {
+                ensurePatched();
+                var ns = window.RadAjaxNamespace;
+                if (!ns || !ns.EventManager || !ns.EventManager.Add || ns.EventManager.__UnloadPatched) return;
+                var origAdd = ns.EventManager.Add;
+                ns.EventManager.Add = function (el, evtName, handler, clientId) {
+                    if (el === window && evtName === "unload") {
+                        return window.addEventListener("unload", handler);
+                    }
+                    return origAdd.call(this, el, evtName, handler, clientId);
+                };
+                ns.EventManager.__UnloadPatched = true;
+            }
+
+            if (window.RadAjaxNamespace)
+                patchTelerik();
+            else (window.requestIdleCallback || function (cb)
+            {
+                setTimeout(cb, 120);
+            })(patchTelerik);
+        })();
+    </script>
+    <!-- Preconnecting to Google Fonts servers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Defer Roboto font loading to avoid render-blocking -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const robotoLink = document.createElement('link');
+            robotoLink.rel = 'stylesheet';
+            robotoLink.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap';
+            document.head.appendChild(robotoLink);
+        });
+    </script>
+
+    <style>
+        .gm-style, .gm-style * {
+            font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+        }
+    </style>
+
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        
+            <script type="text/javascript">
+                window.__oc_flags_ImprovedBreakpointEventHandling = true;
+            </script>
+            
+        
+    
+    
+    
+        <script type="text/javascript">
+            var __metaQueryBreakpoints = {
+                'sc-size-4': '(max-width: 480px)',
+                'sc-size-3': '(min-width: 480px) and (max-width: 768px)',
+                'sc-size-2': '(min-width: 768px) and (max-width: 992px)',
+                'sc-size-1': '(min-width: 992px)'
+            }
+
+            var __ocSizePoints = [
+                { min: 0, name: 'sc-size-4' },
+                { min: 480, name: 'sc-size-3' },
+                { min: 768, name: 'sc-size-2' },
+                { min: 992, name: 'sc-size-1' }
+            ];
+
+        </script>
+    
+
+    <!-- Framework Section -->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/files/templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/jquery-3.7.1.min.js?seamlessts=639208812476497902" ><\/script>')</script>
+
+    <!--Google Maps API Loader – Improved Version to avoid Warning
+    This script loads the Google Maps JavaScript API using a dynamic and async method.
+    It replaces the old static <script> tag to avoid performance warnings from Google.
+
+    Dynamically creates the <script> tag with loading = async for better performance
+    Builds the API URL with required libraries(places, geometry, marker, geocoding)
+    Uses a Promise and callback(google.maps.__ib__) to confirm when the script is ready
+
+    It Avoids Google’s warning about direct script loading
+    Improves page load speed by loading the API asynchronously-->
+
+    
+        <script>
+            (function (root) {
+                root.OpenCities = root.OpenCities || {};
+                if (!root.OpenCities.GoogleMapsLoader) {
+                    root.OpenCities.GoogleMapsLoader = {
+                        _cbs: [],
+                        _ready: false,
+                        onReady: function (cb) {
+                            if (this._ready) { try { cb(); } catch (e) { console.error(e); } }
+                            else if (typeof cb === 'function') this._cbs.push(cb);
+                        },
+                        _fire: function () {
+                            if (this._ready) return;
+                            this._ready = true;
+                            var q = this._cbs.splice(0);
+                            for (var i = 0; i < q.length; i++) {
+                                try { q[i](); } catch (e) { console.error(e); }
+                            }
+                        }
+                    };
+                }
+            })(window);
+
+            (g => {
+                var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__",
+                    m = document, b = window;
+                b = b[c] || (b[c] = {});
+                var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams,
+                    u = () => h || (h = new Promise(async (resolve, reject) => {
+                        a = m.createElement("script");
+                        e.set("libraries", [...r] + "");
+                        for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                        e.set("callback", c + ".maps." + q);
+                        a.src = "https://maps." + c + "apis.com/maps/api/js?" + e.toString();
+                        a.loading = "async";
+                        a.async = true;
+                        a.defer = true;
+                        d[q] = resolve;
+                        a.onerror = () => reject(Error(p + " could not load."));
+                        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                        m.head.append(a);
+                    }));
+                if (d[l]) {
+                    console.warn(p + " only loads once. Ignoring duplicate load.");
+                } else {
+                    d[l] = (f, ...n) => (r.add(f), u().then(() => d[l](f, ...n)));
+                }
+            })({
+                key: "AIzaSyA6-wTnqkbx9ogGdhEjzdeCBb7eEGu3ePk",
+                v: "3.65"
+            });
+
+            (async () => {
+                try {
+                    if (!google?.maps?.importLibrary) return;
+
+                    if (!window.OpenCities.__mapsLibsPromise) {
+                        window.OpenCities.__mapsLibsPromise = Promise.all([
+                            google.maps.importLibrary('maps'),
+                            google.maps.importLibrary('places'),
+                            google.maps.importLibrary('geocoding'),
+                            google.maps.importLibrary('marker'),
+                            google.maps.importLibrary('geometry')
+                        ]);
+                    }
+                    await window.OpenCities.__mapsLibsPromise;
+
+                    if (window.OpenCities?.GoogleMapsLoader) {
+                        window.OpenCities.GoogleMapsLoader._fire();
+                    }
+                } catch (err) {
+                    console.error('Google Maps failed to initialise', err);
+                }
+            })();
+        </script>
+    
+    <script src="/files/templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/modernizr.custom.710f3bf.js?seamlessts=639208812476503082" defer></script>
+    
+    <!--// End Framework Section -->
+    <!-- OpenCities Section -->
+    <script>
+        var OpenCities = OpenCities || {};
+        OpenCities.Paths = {
+            SiteTemplate: '/files/templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/',
+            ThemePath: '/files/templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/'
+        };
+    </script>
+    <script src='/ocapi/2e9b2135-ff6e-49b4-9196-a555a15e3b5a/en-US/websitesettings.js'></script>
+    <script src="/files/templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/oc_head.js?applied=20260408032424"></script>
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<link href="/files/oc-templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/oc_grid.css~oc_grid_s1.css~oc_style.css~oc_wizard_style.css~oc_main.css~oc_forms.css~oc_wizard.css~oc_wizard_menu.css~oc_main_s1.css~oc_wizard_s1.css~oc_wizard_menu_s1.css~OcScriptCombine_Minify0?uniqueid=20260408032424" rel="stylesheet" type="text/css">
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<link href="/files/oc-templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/client_style.css~client.css~client_menu.css~client_s1.css~client_menu_s1.css~client_forms.css~OcScriptCombine_Minify0?uniqueid=20260408032424" rel="stylesheet" type="text/css">
+    <style type="text/css">.content-outer-container
+{
+    background-image:url('/files/assets/countysite/v/2/planning/images/housing/golden-hill/golden-hill-construction-walkthrough.jpg?w=480');
+    
+}
+
+@media (min-width: 480px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/assets/countysite/v/2/planning/images/housing/golden-hill/golden-hill-construction-walkthrough.jpg?w=768');
+    }
+}
+@media (min-width: 768px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/assets/countysite/v/2/planning/images/housing/golden-hill/golden-hill-construction-walkthrough.jpg?w=992');
+    }
+}
+@media (min-width: 992px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/assets/countysite/v/2/planning/images/housing/golden-hill/golden-hill-construction-walkthrough.jpg');
+    }
+}
+@media (min-width: 1280px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/assets/countysite/v/2/planning/images/housing/golden-hill/golden-hill-construction-walkthrough.jpg');
+    }
+}
+@media (min-width: 1920px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/assets/countysite/v/2/planning/images/housing/golden-hill/golden-hill-construction-walkthrough.jpg');
+    }
+}
+        </style><script>
+(function (BackgroundSettings, $, undefined) {
+    BackgroundSettings.initialise = function () {
+        this.Application = {"CSSSelector":".content-outer-container","EnableFade":false};
+    };
+} (OpenCities.BackgroundSettings = OpenCities.BackgroundSettings || {}, jQuery));
+OpenCities.BackgroundSettings.initialise();
+</script>
+    
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<link href="/files/oc-templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/oc_print.css~client_print.css~OcScriptCombine_Minify0?uniqueid=20260408032424" rel="stylesheet" type="text/css" media="print">
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<script src="/files/oc-templates/00000000-0000-0000-0000-000000000000/c7ebb7a9-12a3-4e24-9782-b9fdf39e1b5f/v/501/external_plugins.js~oc_form_helper.js~oc_main.js~plugins.js~oc_main_init.js~OcScriptCombine_Minify0?uniqueid=20260408032424" defer="true"></script>
+    
+    
+
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DYTCK-JM9C8-ED4EP-C3GGK-Z575H",function(){function e(){if(!r){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.appendChild(e),r=!0}}function t(e){r=!0;var n,t,a,i,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",i=(a.frameElement||a).style,i.width=0,i.height=0,i.border=0,i.display="none",o.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void 0;",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=14,window.BOOMR.url=n+"DYTCK-JM9C8-ED4EP-C3GGK-Z575H";var i=document.currentScript||document.getElementsByTagName("script")[0],o=i.parentNode,r=!1,d=document.createElement("link");if(d.relList&&"function"==typeof d.relList.supports&&d.relList.supports("preload")&&"as"in d)window.BOOMR.snippetMethod="p",d.href=window.BOOMR.url,d.rel="preload",d.as="script",d.addEventListener("load",e),d.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!r)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.appendChild(d);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eyaeaqkb4mhqajqacqnryaaaenviwjoe-f-941c436de-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"41","ak.cp":"1881892","ak.ai":parseInt("1075935",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"h2","ak.rid":"584dcbb4","ak.r":47387,"ak.a2":n,"ak.m":"dscb","ak.n":"essl","ak.cport":50682,"ak.gh":"23.195.36.45","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1787504068","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==kqioOA0hvYbFxNPduFMQZsIsnqjsunBcUTYaPMxOpXF9IcApnOF1T4lGatWnIwXOF75hS6smLRaHk1p0M3D8ffda6kw0BhQ7tZ9R+h7fM7Ii8yKNeNCGX9Sk0gLeqz9UbjbszESLtM3IIkXwvW6hKHeTJDUOKpfTzELsiuG82GP32+/pVGjRP1SvLt1VIseZXmrLDj1phLv3Q/jxERyO193aqEugFyOBuSnhlVyfs4nfX7S2E6wsmPqSACHOxuqoSixOImgGuIfEQOfb06upE1yIV2tv6nYNo978DVKaLRSyCyho7zAsrDAwFLL80sJYcVu821dR0GPtPnbOUIINkc4Dq169Z3+52uWtvFd0lamjUEyOjx3GZMvBdRxjWB3mO9g1qsSQM50NwtEhr6R+OxgcT4fwQvY4aPkia3sFWWA=","ak.pv":"331","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body class="body layout-modern  site-search-always-visble  content-type-uc-resource-guide content-template-copy-1-of-oc-full-width-without-image group-template-oc-full-width-with-default-header page-name-adu-guide page-sequence-13 page-depth-4 page-section-2 website-type-primary device-desktop featured-site-section   " id="body-top">
+    <form name="mainForm" method="post" action="/Departments/Planning/Housing/ADU-Guide" id="mainForm">
+<input type="hidden" name="ctl04_seamless_script_manager_TSM" id="ctl04_seamless_script_manager_TSM" value="" />
+<input type="hidden" name="__SEAMLESSVIEWSTATE" id="__SEAMLESSVIEWSTATE" value="H4sIAAAAAAAEAAHQCy/0SIzcVkGCGYVUMPzb+f0LNv8/3iiXgCBKlrW7RB9ukkfUbUyNkXr4rLKkWU+6+9qxsReCGpHwp8ceH/wMLdxCQcsmamICpLZGEpYytaJV5Avz0X8eU5pnEhCSe2z6zjNcGhXLpQG6r+q0xz0274LjquWV/KjAXEkJINF32KkqPUT3dLUsNf7/bwUljuVtUQU64CsCH8o3J1kP4Ko46sFI5RVSxJaxQ1kzJ+Q6NAgDWC8jvuiIgXnitq5e5gtH1tynya5REL3tvMH5seSZZz8/8L80ZQsdi0JI1r9c+IypEhRKuVLqRFa5LKuDbUl3uZQoBW7luf3X1IWpZcZxeNFl+i4Ta/x6mhw5FrgBOVqcbEBi3U/xyTQ+ovVCIqV7Rb68ZzyZGOTT1529Gv8vK9xXwQiPgwZnsnJM3gphrpJDDZ24gHUWhZOpfoz1PSW1FgKt9pLnQUSQO3aig6LduW6ACZ0zbI8nm6YB8JVmtq1RqzP0gvVw0OZg2PYHPUxDWfMiAUK5JFb2M7h51NDkDWUaIzfeXBYtMqeJulfaqPzLXBVLEACdfzguJWf23gKXWs9+Ody8hyTsxJW1Q42BH3yHhW+cv8iQzsxJOEaLzvZDcgXa7hTzCRCnK3WJ4eNJ6fvMRZM73dO3rW9H3M8MvIWto3WnkiRZqUUyLTE7i2IvtWlryf66Dvv6GhulO0sAjzozE8URuzxct1zzNWkuDIFEDBxn3SVovritvkzqY/McnVZICO/XEIZPtqjqUsabV1qlwSkcsebw7gYOaw5wntPCm7eWR/5xlIpJKpzkDkrCjgkSVNBQ1FAWDmu2FVg7s++GchHJg77XZ7hLNUTlOWErT+Yffz3eer43BIfGu0C2wGojgq4/aJUl2qwDNdohehEnsfJLlXDyDBvZaMnp20Wj1fl7X8wo6iAH1iMi9ZeNb/nr41Y8Mfx2FnfIYNuuC+5HFCiy9T/QW4ViT6JsLyHaR26wdLReR7eRmqHhHjicyEWgDmSMJh3i6UYpKxAZN4SspQ5fxMLDl05wGkFGVnFnwqRN8iWGKvUWvoVcfDOpNIvG0p8U4VoFW60Fe6MWaEy8wG4GeA4xJ8EfXZYm6fcQwrZLidmUWyqXT4NDE32YVDoabFZLZIQcAeo799UFSCfbUMAsgZpObMvS1usfnTp7ZXccOPoHlpU2iCa5jpOWOIA9EJIyD/c6EYmxrSWJv5WXX9dWUyvt/xs6RQ+4i/FmlNtSYuyn7qI4liBGGzsEubhYdTv+mIVdXHA58cPld9kjjnkFbcF+WH+jVhGswiRwvPo6yRT7vFh3Kbs1vQkTRXg0Pr4Y/AbUU4r7imyoz5ndCwVCf997teOg8W9LVYUp6ATt5qLPGU2wQCZteMXB1slMaUDvTSAA0mVUeNcmZNWS/5Px0H/miQIjVQQf0WNnY6VdfM+TpC2NseriLz9zv47YXlE63N1LZ9m1FJ1tR8B9KwL8QFbqQr+Er1NZL8NZOYhCJQ2Ho9TiSfGDjHKszlZ2YhfkT9JeRrqi+SDv/f3hwFHiHEONtWoUA+/fVe7lk/Wh17pya4fv87nmjvti32yu0v48Bs0Fmb53S3rqlZBfoKxD0nJC86GNhTduhyJ2iqn1lS3MQmk28KxklyTJMuFrZpbV+H96wUQDoYp8c/u3E0xrs1IwHIeiEuPwrCvLJkTu2dD2QCq8Hps5Q2ikcnUwibTjIjjh0C8ScAZgTEFGFvBXuc6SkWSMnrLF0cLTEPzdxuNw0Zy/Rdpm8WuEO71Gw1mFvOr4C1fzlorceo27CKjUL32KaEM8C/d4+9YOYUKgs22E6X8N74e1aILYp7qyQ67BJmhELip65LEUyysqTJT3Qa9Ea/jfS12R/G5eHXR5kN9v4V7/dc+Qb6w1xhLN98N0Y6koDC3ptuIM0i6ZFpDEIaoYuN/X7dqLw0pKTDkhjlfl6OW+pLxCZ36OdSZHK4wT+S0bHmg2oE69zY3ufSnyAHJsV2zAPHUoxMQogS/wzIpdd0HNuEOlfmui4HVbxxFwJtZ2I8y+VhVtAgMv9C6w5jWjE9cCh+81BIeOSGjjkiHlPFv7BXNvpDhcPnGz8O8WVSDc8pESDLmrjR+j1u8t60uaaKwgEGAzN+EeF8VP7q3CXRnMdx2/CL0Ns8V+eGikU86ValOwO6gWXdl0LDQnxp/dPf5mIODIkyo5/NY3TH2B1HU9OmrSFkx56Wa6Gp80b8SE2KIwFXBAD8ukpe8NW8mRgIcFRF6evjVQgKhiMa/i5wtuy5hNMGkalUP4UIIcTyI9iFV04z48TRc+TI8f1zJdXC/3egH6kHYkiTBAenb4IQBlM5XOTK/KaEEqn0gM9tT2KhQruzgzE/Wv74lq+GPB+yoYoEMyJ6LGwtmWkCa8bE/W9EqAwHq4yLQhRL0+ztMqy3X/YV1ijW0iYWjfg7SMonpAasTDv0VhRLD4aKmo615zdRP3YWiHwSbeyCwzL8qYagOGHiOsjCaLaY7gGk/FoecPJBEo1ZuagyGRQO8reFAMu66S+s12QgPYsmHbQqq0LGRvU+r44XY4DJE4r06OODtZ0OctUO3aq2MFr0MuRaSJTPq2dlMN56M1HhgE8/6x3THRwZVXf6JDHEuTHyo/CSOdsO8o8598bIW2tFfkVysl0I9JNWD7OcFYSgiv+2F3fOFX1GcTntuuQz4RKf0M8vp6mUMIxmaQPiGSZtC8p6WpBV9IT7x2CFP8UdzxF+skuEHLimclkf2XHaMeWTKIQX/XQX0ppcBtdOl745nJ4mlxf1nQdnZ75tl7Jt3squdY7nq3ksT4Sf4nqXzNOuZTsDiwqL8LNiGBceIaHED43Bcunc+PB0nn/7w2iNKmnqDsbqKIZK1aBkkXAaT8f6ks/k5d+Xzxs+8bmQ2BhNj5uf1VB4kiH3vyxawUdWYXAy1aqablQl3aoaQRAxPiGD5ssxDzWXAzKe7gLy1ttPtv+zndWWDziHysBq+7n0myvoU0pMguVaZm73NPWN6XmiMwNJx4GKIILt/AapRozSOPqDIru+kcAb9pwl667Oc/bDlMxbID9mURql0c+EOb/8xVEftlI+oH+7MwAAo1Yufi6evpcBH4icaj9ERcP0/xNjXxAq/IV06duN/IhFzmHeFV789XZn/pPjc9QBmooGuZMmOX8xtv/tSDiiL9HQkmbPOrXVNfkPsgojr8oxyNXd8/Rv4+6tlqvO6oDKFHEvkW7qL/i7yEQzZ9xyIPv+gSqi4SyymsRplRj7LwJxhggw7/WyrlzNcCG6yl3Pu5Lyj/2ovRG9C3B65CwaB/lxFrQCHpnNIc/KzX3fkJ4fogT2mU51sieWdaEELs6o5HmRMsND/mAupcz39QSvbRbSzVdD7pN9F4dN9AbW5b7BWU0agYnfuvcFNaBHEPMU4ELIZAA5jRXgXEGMZVaNF9kjBEFgr2RqhHqRROz3WfnNlT7MuJOA/z4dOBhW1s1hGGL+FqsCS+s8uglhS+KlIS/7bxOgCaIueWe0H60nLVUiU9mitf6k2xGgaudq9vpvU1w5o9lxqrCtCbWky1GVcXMt2Uy0pHHpG7HdOru7KkJdPjB65VC3Y2+fwx0AjXLuUl9vP0u3A3AdYJaTUU5mSFEJrBFdZnPROyLf+vmUXvoaD2CIOZKioJGUzdnfmaAGrhfN0RrM+uJMZpYrN9FRd6rWCbgFrtVFiFjyN38RYuklizsJB1r/xkkj1UMfCFtSkjkEh1fkqboy9RSOgc9eCfdhuxVFTEhpGf8mfoOlbehFUK2i0rvt4RXaMQ5Ih3hg0cs57bwXOFr18ukLWam4KsWr014w3dHPG6vpLGEeD6PBtalvWT9GYYyx0OvfFAyPLR4B8Rk4a0LBgOa0r/vfMs8ZHxfFOQDwda09ipjTljYONRvPlah3CNa5UhYPwdBujmLB07sRbZNuUBDTxvxAAAS0AkBf/gfynGBDinG2Sr8Swd5j4FWwwDoHe5k/x0r4SgV6eSL1dY2zP5YVgMXQ571lMo//0ZQXZlZsCJoVNQxHV7XdALAAA=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl04_seamless_script_manager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-GB%3add3ac3d5-1e29-4112-8fed-529caffa8f24%3aea597d4b%3bSeamless.Web%3aen-GB%3aebcff6b7-de03-433a-a7d4-68253cd41cdb%3ac38c7732%3bTelerik.Web.UI%2c+Version%3d2020.1.114.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-GB%3a40a36146-6362-49db-b4b5-57ab81f34dac%3a16e4e7cd%3a11e117d7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=jJSLnef2ynX0XQhy19k1zfn79HbdjOfU9ftVmy82rOHFflKGidYABPMdhODkYagYyFPUA5whorB21FFRAde9AA3yfxmqEmRrKBd0sVGwoofNwnX40GCn1RZ0t_p5Hb7BcXHUeCfNj5v1UgrLLlacM2-juMeElRuPND8fhd3hDfc_sJ141O3yLLU_ctYdUUsKDT_IvnyaOSi554gC2Chs3Ewo1jDbOHwwWfgKiZ7xx0sc44RpOufX9HIQazDi1vmuLebkfTx1ISkJdjj3SGKT16Vpgkaryr-IuQZRHXAnVII40u_IRdYlMEOrOexCnW7NV2cAHHQ999adplAIRbkS3EWOuFo7kTwmkqGgM8UrvXrMvzd_qPK5HCMLZa-UmHZS4WO5duAm0Y9rC-R7oZpjp1ntG7th3FYXuMrLHyudPqqAZ03btIp_pVKwYM1T_SBI0" type="text/javascript"></script>
+    
+<script type="text/javascript">
+    try{
+        function SeamlessEndRequestHandler(sender, args) {
+            try {
+                var dataItems = args.get_dataItems();
+                if(dataItems.ctl04_seamless_script_manager)
+                    document.getElementById('__SEAMLESSVIEWSTATE').value = dataItems.ctl04_seamless_script_manager;
+            }
+            catch (e) { }
+        }
+
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(SeamlessEndRequestHandler);
+    }
+    catch (e) { }
+</script>
+
+    <div class="unsupported-browser-warning js-element"></div>
+    
+    <div hidden>
+        <span id="new-window-0">opens in new tab or window </span>
+    </div>
+    <div class="overlay-container"></div>
+    
+    <div class="background-container">
+        <div class="page-container">
+            <!-- OC Layout Element GROUP TEMPLATE -->
+            <!--groupTemplateStart--><div id="skip-to-content-container">
+        <a href='#main-content' class="visuallyhidden focusable" id='skip-to-content-link'>Skip to main content</a>
+    </div><header>
+            <div class="toolbar-outer-container">
+  <div class="toolbar-inner-container clearfix">
+    <div class="toolbar-item toolbar-quicklinks toolbar-display-dropdown">
+	<button type="button" aria-controls="toolbar-quicklinks-drop-down" aria-expanded="false" class="toolbar-button toolbar-button-quicklinks js-element"><span>Quick Links</span><i aria-hidden="true"></i></button>	
+	<div id="toolbar-quicklinks-drop-down" class="toolbar-drop-down toolbar-quicklinks-drop-down clearfix">
+		<ul>
+		  <li><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved/Newsletter" class="oc-icon-b oc-i--none link-type-internal"><span>Newsletter</span></a></li><li><a href="https://www.ulstercountyny.gov/Events" class="oc-icon-b oc-i--none link-type-internal"><span>Events</span></a></li><li><a href="https://www.ulstercountyny.gov/Government/County-Employment" class="oc-icon-b oc-i--none link-type-internal"><span>County Jobs</span></a></li>
+		</ul>
+	</div>
+</div>
+  </div>
+</div>
+            <div class="header-outer-container">
+    <div class="header-container header-layout-2  clearfix">
+			<div class="header-site-logo">
+				<a href="https://www.ulstercountyny.gov/Home" lang="en-US" aria-label="Ulster County - Home - Logo">
+				</a>
+			</div>
+		    <div class="header-website-settings">
+                <button id="btn-mob-nav" type="button" aria-expanded="false" aria-controls="nav">
+                    <i aria-hidden="true"></i><span class="side-menu-btn-text">Menu</span>
+                </button>
+        	</div>
+			
+			<div class="header-search-control-container" id="header-search">
+				<div class="search-inner-container">
+					<div class="sc-search-panel">
+	<label for="ctl06_txtSearch" id="ctl06_lblSearch" class="sc-search-label">Search</label><input name="ctl06$txtSearch" type="text" id="ctl06_txtSearch" class="sc-search-text" placeholder="Search our site..." /><input type="submit" name="ctl06$btnSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl06$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl06_btnSearch" class="sc-search-button" />
+</div>
+					<div role="status" id="predictiveResults"></div>
+				</div>
+			</div>
+    </div>
+</div>
+<div class="navigation-outer-container">
+	<div id="nav" role="navigation" class="navigation-container navigation-container-option-1" data-menu-type="horizontal" aria-label="primary">
+        <div class="grid">
+            <div class="col-xs-12">                
+                <ul class="sf-menu mega-menu" id="sc-main-menu"><li class="nav-section-quarters-1   first-item nav-item-seq-1">
+<a href="https://www.ulstercountyny.gov/Government" class="nav-level-1 nav-has-children"  target="">
+	<i class="item-icon" aria-hidden="true"></i><span class="item-text">Government</span>
+</a>
+<button aria-label="Expand" aria-controls="sc-menu-second-level" aria-haspopup="true" class="mobnav-subarrow" ><i aria-hidden="true"></i></button>
+<ul id="sc-menu-second-level" class="second-level-container ch-6">
+
+          
+            <li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices" class="nav-has-children"  target="">Elected Offices</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices/Legislature"  target="_blank">County Legislature</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices/County-Executive"  target="_blank">County Executive</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices/Comptroller"  target="_self">County Comptroller</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices/Clerk"  target="_blank">County Clerk</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices/Sheriff"  target="_blank">County Sheriff</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Elected-Offices/District-Attorney"  target="_blank">District Attorney</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Government/Agencies" class="nav-has-children"  target="">Departments & Agencies</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Agencies/Departments"  target="">Departments</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Agencies/Boards"  target="_self">Boards & Commissions</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Agencies/Elections-Board-of"  target="_blank">Board of Elections</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Agencies/UCRRA"  target="_blank">Ulster County Resource Recovery Agency (UCRRA)</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Government/News" class="nav-has-children"  target="">News</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/News/Newsroom"  target="">Newsroom</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/News/Newsletter"  target="_blank">Executive Newsletter</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency" class="nav-has-children"  target="">Transparency Center</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency/County-Budget"  target="">County Budget</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency/Policies"  target="_self">Policies</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency/Reports"  target="">Reports and Publications</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency/Public-Notices"  target="">Public Notices</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency/FOIL-Information"  target="">FOIL Information</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Transparency/Ethics-Disclosure-Forms"  target="_self">Ethics Disclosure Forms</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Government/Laws" class="nav-has-children"  target="">Laws and Legislative Process</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Laws/Charter-Code"  target="_blank">Charter and Code</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Laws/Resolutions"  target="_blank">Resolutions</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/Laws/Legislative-Calendar"  target="_blank">Legislative Calendar</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Government/County-Employment" class="nav-has-children"  target="">County Employment</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/County-Employment/Why-Work-for-Ulster-County"  target="_blank">Why Work for Ulster County</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/County-Employment/How-to-Apply"  target="_blank">How to Apply</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Government/County-Employment/Civil-Service-Portal"  target="_blank">Civil Service Portal</a></li></ul></li></ul></li>
+          
+            <li class="nav-section-quarters-2   nav-item-seq-2">
+<a href="https://www.ulstercountyny.gov/Services" class="nav-level-1 nav-has-children"  target="">Programs & Services</a>
+<button aria-label="Expand" aria-controls="sc-menu-second-level" aria-haspopup="true" class="mobnav-subarrow" ><i aria-hidden="true"></i></button>
+<ul id="sc-menu-second-level" class="second-level-container ch-6">
+
+          
+            <li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human" class="nav-has-children"  target="">Health and Human</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Assistance-Programs"  target="">Assistance Programs</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Food-and-Nutritition"  target="">Food and Nutrition</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Housing"  target="">Housing</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Health-and-Well-Being"  target="">Health & Well-Being</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Seniors"  target="">Seniors</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Youth-Family"  target="">Youth & Family</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Human-Rights"  target="">Human Rights & Inclusion</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Disability"  target="">Disability</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Health-Human/Veterans"  target="_self">Veterans</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Services/Payments-Records" class="nav-has-children"  target="">Payments & Records</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Payments-Records/Taxes"  target="">Taxes & Assessments</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Payments-Records/Permits"  target="">Forms and Permits</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Payments-Records/Land-and-Property"  target="">Land and Property</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Payments-Records/Records-and-Identification"  target="">Records and Identification</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Services/Safety-Justice" class="nav-has-children"  target="">Safety & Justice</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Safety-Justice/Emergency-Crisis"  target="">Emergency & Crisis</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Safety-Justice/Reporting-Complaints"  target="">File a report or complaint</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Safety-Justice/Courts-Criminal-Justice"  target="">Courts & Criminal Justice</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Safety-Justice/Volunteer"  target="">Public Safety Volunteer Opportunities</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Services/Transportation" class="nav-has-children"  target="">Transportation</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Transportation/DMV"  target="_blank">DMV</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Transportation/UCAT"  target="_self">UCAT Bus Service</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Transportation/Roads"  target="">Roads</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Services/Environment-Sustainability" class="nav-has-children"  target="">Environment & Sustainability</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Environment-Sustainability/Waste-Resource-Recovery"  target="">Waste & Resource Recovery</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Environment-Sustainability/Water-Flooding"  target="">Water & Flooding</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Environment-Sustainability/Environmental-Stewardship"  target="">Environmental Stewardship</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Services/Jobs-Economy" class="nav-has-children"  target="">Jobs & Economy</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Jobs-Economy/Business"  target="">Business</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Jobs-Economy/Workers"  target="">Workers and Job Seekers</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Jobs-Economy/Consumers"  target="">Consumers</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Jobs-Economy/Planning-and-Development"  target="">Planning and Development</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Services/Jobs-Economy/Agriculture"  target="">Agriculture</a></li></ul></li></ul></li>
+          
+            <li class="nav-section-quarters-3   nav-item-seq-3">
+<a href="https://www.ulstercountyny.gov/Initiatives" class="nav-level-1 nav-has-children"  target="">Initiatives</a>
+<button aria-label="Expand" aria-controls="sc-menu-second-level" aria-haspopup="true" class="mobnav-subarrow" ><i aria-hidden="true"></i></button>
+<ul id="sc-menu-second-level" class="second-level-container ch-8">
+
+          
+            <li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing" class="nav-has-children"  target="">Housing</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/HAF"  target="_blank">Housing Action Fund</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/HSCI"  target="_blank">Housing Smart Communities Initiative (HSCI)</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/Modular-Construction-Strategic-Plan"  target="_self">Modular Construction Strategic Plan</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/ADUs"  target="_blank">Accessory Dwelling Units</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/Golden-Hill"  target="_blank">Golden Hill</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/21-Elizabeth"  target="_blank">21 Elizabeth St</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/Affordable-Rental-Upgrade-Program"  target="_blank">Affordable Rental Upgrade Program</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Housing/Mobile-Homes-Resilience"  target="_blank">Mobile Home Resilience Grants Program</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Climate" class="nav-has-children"  target="">Climate Solutions</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Climate/EO1"  target="">EO1: Trail Blazing a Path for the Planet</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Climate/Community-Climate-Action-Plan"  target="_blank">Community Climate Action Plan</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Climate/Waste-Reduction"  target="">Waste Reduction</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Climate/Clean-Transportation"  target="">Clean Transportation</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Climate/Climate-Corps"  target="_blank">Climate Corps Internship Program</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Emergency-Response" class="nav-has-children"  target="">Emergency Response</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Emergency-Response/ECC"  target="_self">Emergency Communications Center</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Emergency-Response/EMS-Plan"  target="_blank">EMS Plan</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Emergency-Response/Emergency-Communications-Network"  target="_self">Emergency Communications Network</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Emergency-Response/Project-SAFE"  target="_self">Project SAFE</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Emergency-Response/Medical-Reserve-Corps"  target="_blank">Medical Reserve Corps</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Transportation" class="nav-has-children"  target="">Transportation</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Transportation/Safer-Streets"  target="_blank">Safer Streets</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Transportation/UCAT-Route-Optimization"  target="_blank">UCAT Route Optimization</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Transportation/Mobility-2050"  target="_blank">Mobility 2050</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Health-and-Well-Being" class="nav-has-children"  target="">Expanding Health and Well-Being</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Health-and-Well-Being/Center-for-Well-Being"  target="_blank">Center for Well-Being</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Health-and-Well-Being/Behavioral-Health-Needs-Assessment"  target="_blank">Behavioral Health Needs Assessment</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Health-and-Well-Being/Mental-Health-in-Schools"  target="_self">Mental Health in Schools</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Health-and-Well-Being/CHA"  target="_self">Community Health Assessment & Improvement Plan</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Economic-Revitalization" class="nav-has-children"  target="">Economic Revitalization</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Economic-Revitalization/Agriculture"  target="">Supporting Agriculture</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Economic-Revitalization/RestoreNY"  target="">RestoreNY</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Arts-Culture-Recreation" class="nav-has-children"  target="">Arts, Culture, & Recreation</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Arts-Culture-Recreation/Rail-Trails"  target="">Rail Trails</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Arts-Culture-Recreation/Imagine-Ulster"  target="_blank">IMAGINE Ulster: The Ulster County Arts & Culture Plan</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Arts-Culture-Recreation/Sustainable-Tourism-Plan"  target="_blank">Sustainable Tourism Plan</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Broadening-Our-Reach" class="nav-has-children"  target="">Broadening Our Reach</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Broadening-Our-Reach/The-Trudy-Center"  target="_blank">The Trudy Center</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Broadening-Our-Reach/New-Website"  target="_blank">A New County Website</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Broadening-Our-Reach/ThinkDIFFERENTLY"  target="">ThinkDIFFERENTLY!</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Initiatives/Broadening-Our-Reach/Chernivtsi-Partnership"  target="_blank">Chernivtsi, Ukraine Sister Community</a></li></ul></li></ul></li>
+          
+            <li class="nav-section-quarters-4   nav-item-seq-4">
+<a href="https://www.ulstercountyny.gov/Our-County" class="nav-level-1 nav-has-children"  target="">Our County</a>
+<button aria-label="Expand" aria-controls="sc-menu-second-level" aria-haspopup="true" class="mobnav-subarrow" ><i aria-hidden="true"></i></button>
+<ul id="sc-menu-second-level" class="second-level-container ch-6">
+
+          
+            <li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Local-Directory" class="nav-has-children"  target="">Local Directory</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Local-Directory/Municipalities"  target="">Municipalities</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Local-Directory/Schools-Libraries"  target="">Schools & Libraries</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Local-Directory/Courts"  target="">Courts</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Local-Directory/First-Responders"  target="">First Responders and Emergency Numbers</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Tourism-Recreation" class="nav-has-children"  target="">Tourism & Recreation</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Tourism-Recreation/Visit-Ulster-County"  target="_blank">Visit Ulster County</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Tourism-Recreation/Nature-Bus"  target="_blank">Ulster County Nature Bus</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Tourism-Recreation/Rec-Map"  target="_blank">Recreation Map</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Tourism-Recreation/Ulster-County-Pool"  target="_blank">Ulster County Pool</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Tourism-Recreation/Ulster-Landing-Park"  target="_blank">Sojourner Truth/Ulster Landing Park</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Maps" class=""  target="">Maps</a></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/History-and-Culture" class="nav-has-children"  target="">History and Culture</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/History-and-Culture/County-Historian"  target="_blank">County Historian</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/History-and-Culture/County-Archives"  target="_blank">County Archives</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/History-and-Culture/Truth-and-Reconciliation-Commission"  target="_blank">Truth and Reconciliation Commission</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/More-Resources" class="nav-has-children"  target="">More Resources</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/More-Resources/Resources-for-Local-Governments"  target="">Resources for Local Governments</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/More-Resources/Demographic-Tools-and-Data"  target="">Ulster County Demographic Data and Tools</a></li></ul></li><li class="second-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved" class="nav-has-children"  target="">Get Involved</a><button aria-label="Expand" aria-controls="sc-menu-third-level" class="mobnav-subarrow-child"><i aria-hidden="true"></i>
+              </button>
+<ul  id="sc-menu-third-level" class="third-level-container">
+          
+            <li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved/Participate-Ulster"  target="_blank">Participate Ulster</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved/Newsletter"  target="_blank">Newsletter</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved/Internships"  target="">Internships</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved/Volunteer-Opportunities"  target="">Volunteer Opportunities</a></li><li  class="third-level-item  "><a href="https://www.ulstercountyny.gov/Our-County/Get-Involved/Register-to-Vote"  target="_blank">Register to Vote</a></li></ul></li></ul></li>
+          
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+            </header>
+            <div class="content-outer-container">
+                <div id="main" role="main" class="main-outer-container clearfix">
+                        
+                        <div class="content-main-container">
+                            <div class="grid">
+					            <div class="col-xs-12">
+						            <nav id="breadcrumbs-container" aria-label="You Are Here :">
+							            <span role="list">
+<span role="listitem">
+	<a href="https://www.ulstercountyny.gov/Home"  lang="en-US">Home</a>
+	<span class="nav-separator" aria-hidden="true" role="presentation">/</span>
+</span>
+          <span role="listitem"><a href="https://www.ulstercountyny.gov/Departments/Planning" >Planning, Department of</a><span class='nav-separator' aria-hidden="true" role="presentation">/</span></span><span role="listitem">
+	<a href="https://www.ulstercountyny.gov/Departments/Planning/Housing" >
+		Housing Planning
+	</a>
+	<span class='nav-separator' aria-hidden="true" role="presentation">/</span>
+</span>
+<span class="current-page" role="listitem" aria-current="page" >Building an ADU in Ulster County</span>
+          </span>
+						            </nav>
+					            </div>
+                      <div class='col-xs-12'>
+                                                <div class='featured-section-header-outer clearfix'><div class='featured-section-header-inner clearfix'><div class='featured-section-header-logo'><a href='https://www.ulstercountyny.gov/Departments/Planning' class='featured-section-header-logo-link'><span class='featured-section-header-logo-text'>Department of Planning</span></a></div><div class="section-menu-btn js-element" >
+		    <button><i aria-hidden="true"></i><span class="section-menu-btn-text" >Menu</span></button>
+		    </div></div></div><div class="section-nav-outer-container clearfix" ><div id="section-nav" role ="navigation" class="navigation-container" aria-label="secondary"><ul class="featured-section-menu" id="fs-menu"><li class="  nav-item-seq-1">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use" class="nav-level-1 nav-has-children"   target="">Land Use and Community Development</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Comprehensive-Plan" class="nav-has-children" >Comprehensive Plan</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Comprehensive-Plan/Housing" >Housing Action Plan</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Comprehensive-Plan/Transportation" >Long-Range Transportation Plan</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Comprehensive-Plan/Open-Space-Plan" >Open Space Plan</a></li></ul></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Planning-Board" class="" >Planning Board</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Land-Use-Referral" class="" >Make a Land Use Referral</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Land-Use-Referral-Guide" class="nav-has-children" >Ulster County Land Use Referral Guide</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Land-Use-Referral-Guide/Land-Use-FAQ" >Land Use FAQ</a></li></ul></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Community-Design-Manual" class="" >Ulster County Community Design Manual</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Local-Land-Use-Laws" class="" >Local Land Use Laws</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Land-Use/Local-Planning-Agencies" class="" >Local Planning Agencies</a></li></ul></li>
+          
+          <li class="nav-active-path  nav-item-seq-2">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Housing" class="nav-level-1 nav-has-children"   target="">Housing Planning</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Housing-Action-Fund" class="" >Housing Action Fund</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Housing-Smart-Communities-Initiative" class="" >Housing Smart Communities Initiative (HSCI)</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Housing-Action-Plan" class="" >Ulster County Housing Action Plan</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Projects" class="nav-has-children" >Housing Projects</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Projects/Golden-Hill" >Golden Hill Apartments</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Projects/21-Elizabeth" >21 Elizabeth St Affordable Housing</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Projects/Modular-Construction-Strategic-Plan" >Modular Construction Strategic Plan</a></li></ul></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Housing-Development-Corp" class="" >Ulster County Housing Development Corporation (UCHDC)</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/HPOC" class="" >Housing Policy and Oversight Committee (HPOC)</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Resources" class="" >Resources for Housing Planning and Development</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Septic-System-Replacement-Program" class="" >Septic System Replacement Program</a></li><li class="nav-active-path nav-active-page"><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/ADU-Guide" class="" >Building an ADU in Ulster County</a></li></ul></li>
+          
+          <li class="  nav-item-seq-3">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation" class="nav-level-1 nav-has-children"   target="">Transportation Planning</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/UCTC" class="" >Ulster County Transportation Council (UCTC)</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Traffic-Safety-Board" class="" >Traffic Safety Board</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Mobility-2050" class="nav-has-children" >Mobility 2050</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Mobility-2050/2045-lrtp" >Year 2045 Long Range Transportation Plan</a></li></ul></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Traffic-Safety-Campaigns" class="" >Traffic Safety Campaigns</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Projects" class="nav-has-children" >Transportation Projects</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Projects/Kingston-Rail-Crossing-Study" >Kingston Rail Crossing Study</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Transportation/Projects/UCAT-Route-Optimization-Plan" >UCAT Route Optimization Plan</a></li></ul></li></ul></li>
+          
+          <li class="  nav-item-seq-4">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature" class="nav-level-1 nav-has-children"   target="">Agriculture and Natural Land Planning</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Agricultural-Districts" class="nav-has-children" >Agricultural Districts</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Agricultural-Districts/Agricultural-District-1" >Agricultural District #1</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Agricultural-Districts/Agricultural-District-2" >Agricultural District #2</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Agricultural-Districts/Agricultural-District-3" >Agricultural District #3</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Agricultural-Districts/Agricultural-District-4" >Agricultural District #4</a></li></ul></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Agricultural-and-Farmland-Protection-Plans" class="" >Agricultural and Farmland Protection Plans</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Open-Space-Plan" class="" >Open Space Plan</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Ag-and-Nature/Stormwater" class="" >Stormwater and Green Infrastructure</a></li></ul></li>
+          
+          <li class="  nav-item-seq-5">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails" class="nav-level-1 nav-has-children"   target="">Rail Trail Planning</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/State-of-the-Trails" class="" >State of the Trails Report</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Shandaken-Rail-Trail" class="nav-has-children" >Shandaken Rail Trail Project</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Shandaken-Rail-Trail/Shandaken-Feasibility-Study" >Shandaken U&D Trail Feasibility Study</a></li></ul></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Linear-Park-Community-Space" class="" >Midtown Linear Park Community Space</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Archive" class="nav-has-children" >Completed Projects</a><button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Archive/Linear-Park-Project" >Midtown Linear Park Project</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Archive/UD-Corridor" >U&D Corridor Plan</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Archive/Ashokan-Rail-Trail-Project" >Ashokan Rail Trail Project</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Archive/KRTP" >Kingston Rail Trail Project (O&W Connector)</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Rail-Trails/Archive/Hudson-Valley-Rail-Trail-West-Phase-4" >Hudson Valley Rail Trail West: Phase 4</a></li></ul></li></ul></li>
+          
+          <li class="  nav-item-seq-6">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Special-Projects" class="nav-level-1 nav-has-children"   target="">Capital Projects and Special Program Assistance</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Special-Projects/Public-Radio-System" class="" >Ulster County Public Radio System</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Special-Projects/ECC" class="" >Emergency Communications Center (ECC)</a></li></ul></li>
+          
+          <li class="  nav-item-seq-7">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Contact-Us" class="nav-level-1 nav-has-children"   target="">Contact Us</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Contact-Us/Planning-Staff" class="" >Planning Staff</a></li></ul></li>
+          
+          <li class="  nav-item-seq-8">
+<a href="https://www.ulstercountyny.gov/Departments/Planning/Tools-and-Data" class="nav-level-1 nav-has-children"   target="">Tools and Data</a>
+<button class="fs-nav-subarrow"><i aria-hidden="true"></i><span class="visuallyhidden text">Sub-menu</span></button>
+<ul>
+          
+          <li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Tools-and-Data/Demographics" class="" >Ulster County Demographic Data and Tools</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Tools-and-Data/Ulster-County-Parcel-Viewer" class="" >Ulster County Parcel Viewer</a></li><li class=" "><a href="https://www.ulstercountyny.gov/Departments/Planning/Tools-and-Data/Local-Law-Library" class="" >Local Law Library</a></li></ul></li>
+          
+          </ul></div></div> </div>
+					            <div class="col-xs-12">
+						            <div class="main-inner-container">
+							            <div id="main-content" class="main-container clearfix">
+							              
+                            <!-- OC Layout Element Conent Template -->
+							              <!--normalTemplateStart--><div class="grid">
+    <div class="col-xs-12">
+        <h1 class='oc-page-title '>Building an ADU in Ulster County</h1>
+        <div class="table-of-content-container clearfix" role="navigation" aria-label="page table of contents">
+      <span class="visuallyhidden">These links change page section content below</span>
+  <ul class="table-of-content"><li>
+	<a href="#section-1" title="Overview">
+		Overview
+	</a>
+</li><li>
+	<a href="#section-2" title="Step 1: Confirm Eligibility">
+		Step 1: Confirm Eligibility
+	</a>
+</li><li>
+	<a href="#section-3" title="Step 2: Plan and Prepare">
+		Step 2: Plan and Prepare
+	</a>
+</li><li>
+	<a href="#section-4" title="Step 3: Design and Permits">
+		Step 3: Design and Permits
+	</a>
+</li><li>
+	<a href="#section-5" title="Step 4: Financing">
+		Step 4: Financing
+	</a>
+</li><li>
+	<a href="#section-6" title="Step 5: Construction">
+		Step 5: Construction
+	</a>
+</li><li>
+	<a href="#section-7" title="Step 6: Occupancy and Rental">
+		Step 6: Occupancy and Rental
+	</a>
+</li><li>
+	<a href="#section-8" title="Key Contacts and Resources">
+		Key Contacts and Resources
+	</a>
+</li><li>
+	<a href="#section-9" title="ADU Regulations by Ulster County Municipality">
+		ADU Regulations by Ulster County Municipality
+	</a>
+</li></ul>
+</div>
+      
+        <div class="page-section page-section-type-2">
+	<div class="page-section-container page-section-container-1" data-section-index="1"><h2 id="section-1" data-heading-index="1" class="page-section-header page-section-header-1 page-section-header-auto">Overview</h2><p><strong><em>A Step-by-Step Guide for Homeowners</em></strong></p>
+<p>An accessory dwelling unit (ADU) is a self-contained residential unit on the same property as a single-family home &mdash; a basement apartment, a garage conversion, a backyard cottage, or an in-law suite. This guide walks homeowners through every stage of the process, from confirming eligibility through occupancy and rental, with links to County, state, and partner resources throughout.</p>
+</div><div class="page-section-container page-section-container-2" data-section-index="2"><h2 id="section-2" data-heading-index="2" class="page-section-header page-section-header-2">Step 1: Confirm Eligibility</h2>
+<p>ADU regulations are set at the local level and vary across Ulster County&rsquo;s municipalities. Before investing time in project planning, confirm what your town or village allows and whether your property can support an ADU.</p>
+<p><span style="font-size: 1em; font-family: inherit;">Most municipalities allow at least one ADU on owner-occupied single-family residential property. Some permit only interior or attached configurations; others allow detached structures as well. Your lot must also meet setback requirements and have adequate utility capacity. Properties on private well or septic systems must confirm that a second unit can be supported by the property's water and septic capacity before proceeding.</span></p>
+<h3>What to do</h3>
+<ol>
+<li>
+<p><strong>Property Information:</strong> Visit the <a href="https://www.ulstercountyny.gov/Departments/Finance/Real-Property/Tax-Mapping/Parcel-Viewer" target="_blank">Ulster County Parcel Viewer</a> to identify your zoning district for your property.</p>
+</li>
+<li>
+<p><strong>Zoning Requirements:</strong> Look up <a href="#ADURegulationsbyMunicipality" target="_blank">ADU Regulations by municipality</a> to see the permitted ADU types, size limits, and owner-occupancy requirements for your property. Call or visit your Building Department using the <a href="https://www.ulstercountyny.gov/Our-County/Local-Directory/Municipalities/Planning-and-Zoning-Boards" target="_blank">Municipality Directory</a> and confirm your property is in a qualifying residential zone and free of outstanding zoning violations.</p>
+</li>
+<li>
+<p><strong>Design and Dimensional Requirements:</strong> Check your lot dimensions against local setback requirements using the Measurement tool in the <a href="https://www.ulstercountyny.gov/Departments/Finance/Real-Property/Tax-Mapping/Parcel-Viewer" target="_blank">Ulster County Parcel Viewer</a><span style="font-size: 1em; font-family: inherit;">&nbsp;or a measuring tape.</span></p>
+<p><img alt="Screenshot demonstrating where to find the " measurements="" tool="" in="" sidebar="" of="" the="" ulster="" county="" parcel="" src="/files/assets/countysite/v/1/planning/images/housing/adus/parcel-viewer-measurement-tool-screenshot.png" style="width: 372.222px; height: 371.889px;"></p>
+</li>
+<li>
+<p><strong>Water and Septic System Check:</strong> If on private well or septic, contact <a href="https://www.ulstercountyny.gov/Departments/Health/Environmental-Health-Division/Water-Wastewater-Regulation" target="_blank">Ulster County Environmental Health</a> to confirm capacity for a second unit.</p>
+</li>
+</ol>
+<h3>Resources</h3>
+<ul style="margin-left: 40px;">
+<li><a href="#ADURegulationsbyMunicipality" target="_blank">ADU Regulations by Municipality</a></li>
+<li><a href="https://www.ulstercountyny.gov/Departments/Finance/Real-Property/Tax-Mapping/Parcel-Viewer" target="_blank">Ulster County Parcel Viewer</a></li>
+</ul>
+<p>&nbsp;</p>
+</div><div class="page-section-container page-section-container-3" data-section-index="3"><h2 id="section-3" data-heading-index="3" class="page-section-header page-section-header-3">Step 2: Plan and Prepare</h2>
+<p>Good planning before engaging designers or contractors saves time and money. This step covers both project planning and the pre-development work needed to be competitive for grant funding or loans.</p>
+<h3>Project Planning</h3>
+<ol class="spacious-list">
+<li><strong>Decide on your ADU type</strong> (detached, attached, or interior conversion) and approximate size based on your site and local limits. Interio conversions are generally less expensive and have fewer setback constraints.</li>
+<li><strong>Conduct extensive research</strong> on cost and opportunities for cost savings. New detached ADUs in the Hudson Valley typically run $150,000&ndash;$300,000+, but interior conversions can often be significantly less.</li>
+<li><strong>Clarify your intended use:</strong> family housing, affordable rental, or market-rate rental. This shapes both design and financial planning.</li>
+<li><strong>Download and complete the <a title="ADU-guidebook-exercises.pdf" href="/files/assets/countysite/v/1/planning/documents/housing/adus/adu-guidebook-exercises.pdf" target="_self">ADU Guidebook Exercises</a></strong> to organize what you&rsquo;ll need throughout the process.</li>
+</ol>
+<h3>Pre-Development</h3>
+<ol class="spacious-list">
+<li><strong>Schedule a pre-application meeting with your local building or planning department</strong> to confirm what approvals are required. Some projects need only a building permit; others may require a special use permit or variance.</li>
+<li><strong>Engage a designer or contractor</strong> to develop a site plan showing the ADU in relation to your property lines and existing structures.</li>
+<li><strong>Get preliminary estimates from at least two contractors</strong> covering site prep, utility connections, and construction.</li>
+<li><strong>Compile key property documents:</strong> deed, survey, mortgage statement, property tax bills, and homeowner&rsquo;s insurance.</li>
+</ol>
+<h3>Resources</h3>
+<ul style="margin-left: 40px;">
+<li><a title="RUPCO Plus One ADU Program" href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Programs/Plus-One-ADU-Home-Program" target="_blank">RUPCO Plus One ADU Program</a></li>
+<li><a title="ADU-guidebook-exercises.pdf" href="/files/assets/countysite/v/1/planning/documents/housing/adus/adu-guidebook-exercises.pdf" target="_self">ADU Guidebook Exercises</a></li>
+<li><a href="https://engagekingston.com/adu-design-competition" target="_blank">Free Pre-Approved ADU Construction Documents for the City of Kingston</a></li>
+</ul>
+<p>&nbsp;</p>
+</div><div class="page-section-container page-section-container-4" data-section-index="4"><h2 id="section-4" data-heading-index="4" class="page-section-header page-section-header-4">Step 3: Design and Permits</h2>
+<p>The design phase produces the drawings required for building permit submission. Most new detached structures and additions require stamped architectural or engineering documents; simpler interior conversions may not. Confirm with your local building department before engaging a design professional.<br>
+<br>
+All ADU designs must comply with the New York State Residential Code and local building code amendments. Rental units must meet habitability standards: minimum ceiling heights, egress windows in sleeping areas, and adequate ventilation. A building permit is required for virtually all ADU construction. Undertaking work without a building permit creates significant legal and financial risk.</p>
+<h3>What to do</h3>
+<ol>
+<li><strong>Produce floor plans and a site plan</strong> that meet your municipality&rsquo;s dimensional limits &mdash; square footage, height, and setbacks.
+<ul>
+<li>For garage or basement conversions, pay particular attention to moisture control, insulation, and ceiling height, which are common code compliance issues.</li>
+</ul>
+</li>
+<li><strong>Consider energy efficiency upgrades</strong> &mdash; heat pumps, air sealing, insulation &mdash; that may qualify for federal tax credits and NYSERDA incentives.</li>
+<li><strong>Submit your building permit application with all required materials</strong>. If a variance or special use permit is needed, schedule those board hearings early &mdash; many boards meet only monthly.</li>
+<li><strong>Retain all permit documents.</strong> You will need them for required inspections and the final certificate of occupancy.</li>
+</ol>
+<h3>Resources</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://up.codes/codes/new_york?year=2025" target="_blank">NYS Building Codes</a></li>
+<li><a href="https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program" target="_blank">NYSERDA EmPower+ Program</a></li>
+</ul>
+<p><span>&nbsp;</span></p>
+</div><div class="page-section-container page-section-container-5" data-section-index="5"><h2 id="section-5" data-heading-index="5" class="page-section-header page-section-header-5">Step 4: Financing</h2>
+<p>ADU construction can cost $50,000&ndash;$300,000, depending on project type and scope. Most homeowners use a combination of sources to fund their project. Pursuing financing in parallel with design and permitting &mdash; rather than waiting until after permits are issued &mdash; reduces overall timeline. Please carefully consider all the financial risks before pursuing the construction of an ADU.</p>
+<h3><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Programs/Plus-One-ADU-Home-Program" target="_blank">RUPCO Plus One ADU Grant &mdash; UP TO $112,500</a></h3>
+<p>The primary grant resource for Ulster County homeowners. Income-eligible owner-occupants in participating municipalities may apply for grants of up to $112,500 toward ADU construction or rehabilitation. In exchange, recipients agree to rent the unit affordably for a minimum of ten years and prohibit short-term rental use during that period. Applications are open on a first-come, first-served basis.</p>
+<h3>Additional Options</h3>
+<ul class="spacious-list" style="margin-left: 40px;">
+<li><strong>Construction Loan:</strong> Short-term financing for the build, typically converted to a mortgage or HELOC at completion.</li>
+<li><strong>SONYMA:</strong> <a href="https://hcr.ny.gov/sonyma" target="_blank">SONYMA &mdash; NYS Mortgage Agency</a> below-market mortgage products that may support renovation financing.</li>
+<li><strong>Federal Tax Credits:</strong> Federal Tax Credits &mdash; The Inflation Reduction Act provides up to 30% in credits for qualifying energy efficiency improvements.</li>
+</ul>
+<p>&nbsp;</p>
+</div><div class="page-section-container page-section-container-6" data-section-index="6"><h2 id="section-6" data-heading-index="6" class="page-section-header page-section-header-6">Step 5: Construction</h2>
+<p>Once permits are issued and financing is secured, construction may begin. New York State law requires that contractors performing work over $500 be licensed and insured. Before signing any contract, verify your contractor&rsquo;s license, general liability insurance, and workers&rsquo; compensation coverage.</p>
+<h3>What to do</h3>
+<ol>
+<li><strong>Sign a written contract</strong> specifying the full scope of work, materials, timeline, payment schedule, and change order process. Do not proceed without one.</li>
+<li><strong>Schedule all required inspections</strong> &mdash; typically foundation, framing, rough plumbing, rough electrical, insulation, and final. Your building permit will list what&rsquo;s required.</li>
+<li><strong>Retain at least 10% of the contract price</strong> until all inspections are passed and a certificate of occupancy is issued.</li>
+<li><strong>Keep a project log</strong>: photograph work in progress, track payments, and get written change orders for any scope changes.&nbsp;</li>
+</ol>
+<p>&nbsp;</p>
+</div><div class="page-section-container page-section-container-7" data-section-index="7"><h2 id="section-7" data-heading-index="7" class="page-section-header page-section-header-7">Step 6: Occupancy and Rental</h2>
+<p>Once your certificate of occupancy (CO) is issued, your ADU is ready to use. No one may occupy or rent the unit before the CO is in hand. If done, this could expose a homeowner to liability and potential insurance claim denials.</p>
+<h3>How People Use ADUs</h3>
+<div class=" uc-faq">
+<div data-type="0" data-title-level="4" class="oc-wysiwyg-container">
+<div class="oc-wysiwyg-container-panel">
+<h4>Rental housing</h4>
+<div class="oc-wysiwyg-container-panel-content">
+<p>Renting your ADU to a tenant is the most common use. It generates income that can offset your mortgage or construction costs, and it adds needed housing supply in your community. A written lease is required under New York State law and protects both parties.</p>
+</div>
+</div>
+<div class="oc-wysiwyg-container-panel">
+<h4>Multigenerational and family housing</h4>
+<div class="oc-wysiwyg-container-panel-content">
+<p>Many homeowners build ADUs to house a family member &mdash; an aging parent, an adult child, or a relative who needs to be nearby. This arrangement allows for closeness and mutual support while preserving privacy and independence for both households. If your family member is not paying rent, you are not acting as a landlord, though it&rsquo;s still worth having a written agreement that outlines expectations.</p>
+</div>
+</div>
+<div class="oc-wysiwyg-container-panel">
+<h4>Caregiver housing</h4>
+<div class="oc-wysiwyg-container-panel-content">
+<p>An ADU can house a paid or unpaid caregiver, allowing older adults or people with disabilities to age in place while having daily support nearby. This is one of the fastest-growing uses of ADUs nationally and one of the clearest examples of how a small additional unit can make an outsized difference in a household&rsquo;s quality of life.</p>
+</div>
+</div>
+</div>
+</div>
+<h3><span style="font-size: 1em;">Living in Close Proximity</span></h3>
+<p>Sharing a property with another household &mdash; whether a tenant, a family member, or a caregiver &mdash; works best when expectations are clear from the start. A few things worth thinking through before someone moves in:</p>
+<div class=" uc-faq">
+<div data-type="0" data-title-level="2" class="oc-wysiwyg-container">
+<div class="oc-wysiwyg-container-panel">
+<h2>Shared spaces and access</h2>
+<div class="oc-wysiwyg-container-panel-content">
+<p>Clarify in advance who has access to shared areas like driveways, yards, laundry, and storage. The clearer the boundaries, the less room for friction.</p>
+</div>
+</div>
+<div class="oc-wysiwyg-container-panel">
+<h2>Privacy and noise</h2>
+<div class="oc-wysiwyg-container-panel-content">
+<p>Both households benefit from clear norms around noise, visitors, and entering each other&rsquo;s space. As a landlord, New York State law requires you to give reasonable notice before entering a tenant&rsquo;s unit.</p>
+</div>
+</div>
+<div class="oc-wysiwyg-container-panel">
+<h2>Utilities and maintenance</h2>
+<div class="oc-wysiwyg-container-panel-content">
+<p>Decide how utilities will be handled &mdash; included in rent, split, or metered separately &mdash; and put it in writing. Establish a clear process for maintenance requests so issues get addressed promptly.</p>
+</div>
+</div>
+</div>
+&nbsp;</div>
+<h3>Setting Rent</h3>
+<p>Setting rent is a balancing act. You want to charge enough to cover your costs &mdash; mortgage, taxes, insurance, utilities, and maintenance &mdash; without pricing the unit out of reach for people who need housing in your community. HUD publishes Fair Market Rents (FMRs) for Ulster County annually; these figures reflect what a modest unit in the local market rents for and are a useful starting point.</p>
+<h4>Section 8 / Housing Choice Vouchers</h4>
+<p>ADU owners may choose to rent to tenants who hold a Housing Choice Voucher (commonly called Section 8). The voucher pays a portion of rent directly to the landlord, and the tenant pays the remainder. The unit must pass an inspection and meet HUD housing quality standards. RUPCO administers the Section 8 program in Ulster County and can walk you through what&rsquo;s involved in becoming a participating landlord. Accepting vouchers is one of the most direct ways an ADU can serve households with the greatest housing need.</p>
+<h4>Resources</h4>
+<ul style="margin-left: 40px;">
+<li><a href="https://ag.ny.gov/publications/residential-tenants-rights-guide" target="_blank">NY State Tenant Rights Guide</a>&nbsp;&mdash; NYS Attorney General</li>
+<li><a href="https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/select_Geography.odn" target="_blank">HUD Fair Market Rents</a></li>
+<li><a href="https://rupco.org/rental-assistance-section-8/" target="_blank">RUPCO Section 8 / Housing Choice Voucher Program</a>
+<ul>
+<li><a href="https://rupco.org/how-to-become-a-section-8-landlord/" target="_blank">Becoming a Section 8 landlord in Ulster County</a></li>
+</ul>
+</li>
+<li><a href="https://rupco.org/plusoneulster/" target="_blank">Plus One Affordability Requirements</a></li>
+<li><a href="https://www.ulstercountyny.gov/Services/Health-Human/Housing" target="_blank">Ulster County Housing Resources</a></li>
+</ul>
+</div><div class="page-section-container page-section-container-8" data-section-index="8"><h2 id="section-8" data-heading-index="8" class="page-section-header page-section-header-8">Key Contacts and Resources</h2>
+<ul style="margin-left: 40px;">
+<li><a href="https://www.ulstercountyny.gov/Initiatives/Housing/ADUs" target="_blank">Ulster County ADU Hub</a></li>
+<li><a href="https://www.ulstercountyny.gov/Departments/Planning/Housing/Programs/Plus-One-ADU-Home-Program" target="_blank">Plus One ADU Grant Program (RUPCO)</a></li>
+<li><a href="https://www.ulstercountyny.gov/Departments/Planning">Ulster County Planning Department</a></li>
+<li><a href="https://www.ulstercountyny.gov/Departments/Finance/Real-Property/Tax-Mapping/Parcel-Viewer" target="_blank">Ulster County Parcel Viewer</a></li>
+<li><a href="https://engagekingston.com/adu-design-competition" target="_blank">Free Pre-Approved ADU Plans</a></li>
+<li><a href="https://hcr.ny.gov/adu" target="_blank">NYS HCR Plus One Program</a></li>
+<li><a href="https://www.ulstercountyny.gov/Departments/Health/Environmental-Health-Division" target="_blank">Ulster County Environmental Health</a></li>
+<li><a href="https://up.codes/codes/new_york?year=2025" target="_blank">NYS Building Codes</a></li>
+<li><a href="https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program" target="_blank">NYSERDA EmPower+ Program</a></li>
+<li><a href="https://hcr.ny.gov/sonyma" target="_blank">SONYMA Mortgage Program</a></li>
+<li><a href="https://ag.ny.gov/publications/residential-tenants-rights-guide" target="_blank">NY State Tenant Rights Guide</a></li>
+<li><a href="https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/select_Geography.odn" target="_blank">HUD Fair Market Rents</a></li>
+<li><a href="https://rupco.org/rental-assistance-section-8/" target="_blank">RUPCO Section 8 / Housing Choice Voucher Program</a></li>
+</ul>
+<p>&nbsp;</p>
+</div><div class="page-section-container page-section-container-9" data-section-index="9"><h2 id="section-9" data-heading-index="9" class="page-section-header page-section-header-9"><a name="ADURegulationsbyMunicipality" id="muni-regs"></a>ADU Regulations by Ulster County Municipality</h2>
+<h3>City of Kingston</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://codehub.gridics.com/us/ny/kingston-adopted#/75a7055a-e73b-4909-8fae-bcc61668f344/0095a17c-a1c6-44db-8e52-78599dd83a83/e081ae0c-16ff-49ec-b99c-d692de65d167">Accessory Dwelling Unit Requirements</a></li>
+<li><a href="https://map.gridics.com/us/ny/kingston-adopted#12.53/41.92713/-73.99158/0/45">Interactive Zoning Map</a></li>
+</ul>
+<h3>Town of Denning</h3>
+<ul style="margin-left: 40px;">
+<li>ADUs are allowed by special permit</li>
+<li><a href="https://www.denningny.gov/wp-content/uploads/2023/05/TOD-ZONING-LAW-2019.pdf">Town of Denning Zoning Code</a></li>
+</ul>
+<div>
+<h3>Town of Esopus</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/38699132?highlight=accessory,accessory%20dwelling,dwelling,dwellings&amp;searchId=5768790862083568#38699132">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/ES0782/ES0782-123a%20Schedule%20of%20Permitted%20Uses.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Gardiner</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/9151222?highlight=accessory,accessory%20apartment,accessory%20apartments,apartment,apartments&amp;searchId=5770760588365428#9151222">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/9151213#9151213">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Hardenburg</h3>
+<ul style="margin-left: 40px;">
+<li>ADUs are allowed by a conditional use permit</li>
+<li><a href="http://www.townofhardenburgh.org/pdfs/ZONING1.pdf">Town of Hardenburgh Zoning Code</a></li>
+</ul>
+<h3>Town of Hurley</h3>
+<ul style="margin-left: 40px;">
+<li>ADUs are allowed by a conditional use permit</li>
+<li><a href="https://ecode360.com/14509288">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/HU1421/HU1421-210a%20Table%20of%20Use%20Regulations.pdf">Zoning districts where ADUS are allowed</a></li>
+<li><a href="https://ecode360.com/attachment/HU1421/HU1421-210b%20Density%20Control%20Schedule.pdf">ADU density requirements</a></li>
+</ul>
+<h3>Town of Kingston</h3>
+<ul style="margin-left: 40px;">
+<li>Accessory apartments are not allowed</li>
+</ul>
+<h3>Town of Lloyd</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/14351170?highlight=accessory&amp;searchId=27391867233408747#14351170">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/LL0645/LL0645-100a%20Use%20Table.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Marbletown</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://www.marbletown.net/sites/g/files/vyhlif4666/f/uploads/draft_accessory_apartment_law_12.27.2021.pdf">Accessory Apartment Regulations</a></li>
+<li><a href="https://ecode360.com/6183997#6183997">ADU density requirements</a></li>
+</ul>
+<h3>Town of Marlborough</h3>
+<ul style="margin-left: 40px;">
+<li>ADUs not permitted</li>
+</ul>
+<h3>Town of New Paltz</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/14351170?highlight=accessory&amp;searchId=27391867233408747#14351170">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/LL0645/LL0645-100a%20Use%20Table.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Olive</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://www.marbletown.net/sites/g/files/vyhlif4666/f/uploads/draft_accessory_apartment_law_12.27.2021.pdf">Accessory Apartment Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/OL1834/OL1834-155%20sched.pdf">ADU density requirements</a></li>
+</ul>
+<h3>Town of Plattekill</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/9303953">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/PL1069/PL1069-110a%20Schedule%20of%20District%20Regulations%20Table.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Rochester</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://townofrochester.ny.gov/files/2022/02/DOC021822.pdf">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/RO1435/RO1435-140a%20Schedule%20of%20Dis%20Reg.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Rosendale</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/44979714?highlight=accessory&amp;searchId=5782153602239349#44979714">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/RO0511/RO0511-075a%20Sched%20of%20Permitted%20Uses.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Saugerties</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/13646329#13646329">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/SA2874/SA2874-245a%20Sch%20of%20Dist%20Use%20Reg.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Shandaken</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/13646329#13646329">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/11109932">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Shawangunk</h3>
+<ul style="margin-left: 40px;">
+<li><a href="file:///C:/Users/klor/Downloads/%E2%80%A2%09https:/www.shawangunk.org/wp-content/uploads/bsk-pdf-manager/2022/05/Local-Law-No.-2-of-2022-Adopting-Amendments-to-the-Accessory-Dwelling-Unit-Regulations-Set-Forth-in-the-Town-of-Shawangunk-Zoning-Local-Law.pdf">Accessory Dwelling Unit Regulations</a></li>
+</ul>
+<h3>Town of Ulster</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://townofulster.ny.gov/wp-content/uploads/zoning-law.pdf">Town of Ulster Zoning Code</a></li>
+</ul>
+<h3>Town of Wawarsing</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/38418152">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/WA0802/WA0802-112a%20Sched%20of%20Dist%20Regs.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Town of Woodstock</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/109617#109617">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/WO2784/WO2784-260a%20Use%20Reg%20Table.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Village of Ellenville</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://ecode360.com/5074077#5074087">Accessory Dwelling Unit Regulations</a></li>
+</ul>
+<h3>Village of New Paltz</h3>
+<ul style="margin-left: 40px;">
+<li><a href="https://docs.google.com/document/d/1IyKmJxBCpP7MV5lmZlemlHmjycqmSazNxpMMS_dJmKA/edit">Accessory Dwelling Unit Regulations</a></li>
+<li><a href="https://ecode360.com/attachment/NE0076/NE0076-212a%20Schedule%20A.pdf">Zoning districts where ADUS are allowed</a></li>
+</ul>
+<h3>Village of Saugerties</h3>
+<ul style="margin-left: 40px;">
+<li>ADUs not permitted. Variances may be considered.&nbsp;</li>
+</ul>
+</div>
+
+</div>
+	<div class="page-section-pagination"></div>
+</div>
+      
+        
+            
+        
+    </div>
+    
+    
+</div><!--normalTemplateEnd-->
+                            
+                            
+<script type="text/javascript">
+    function ctl10_divFormContainer_ValidateSeamlessForm() {
+        var $ = $seamless.$;
+        
+        $('a[href$="se_form"], a[href*="se_form_JsDatePicker_dateInput_text"], a.captcha-class',
+                    document.getElementById('ctl10_divFormContainer'))
+        .each(function () {
+            this.onclick = function () {
+                $($(this).attr('href')).trigger('focus');
+                return false;
+            }
+        });
+    }
+</script>
+
+<div>
+	<div id="ctl10_divFormContainer" class="se-form-container">
+        <div class="sc-feedback-form sc-form">
+   <div class="sc-form-errors">
+      
+   </div>
+          
+		
+				
+			
+				
+			
+				<div class="sc-element-container sc-radio-button generic-form-radiobutton">
+	<fieldset>
+		<legend>
+			<span id='span_ctl10_rpControls_ctl02_fiControl_se_form' class='sc-label se-matrix-control-label'>Was this page helpful?<span class="se-form-required-asterisk"> * </span> <span class="se-form-required-text">(required)</span></span>
+   			<span class="sc-description">Help us improve this site</span>
+		</legend>
+   		<div class="sc-form-control"><span id="ctl10_rpControls_ctl02_fiControl_se_form" class="generic-form-radiobutton" aria-labelledby="span_ctl10_rpControls_ctl02_fiControl_se_form"><input id="ctl10_rpControls_ctl02_fiControl_se_form_0" type="radio" name="ctl10$rpControls$ctl02$fiControl$se_form" value="Yes" /><label for="ctl10_rpControls_ctl02_fiControl_se_form_0">Yes</label><br /><input id="ctl10_rpControls_ctl02_fiControl_se_form_1" type="radio" name="ctl10$rpControls$ctl02$fiControl$se_form" value="Maybe" /><label for="ctl10_rpControls_ctl02_fiControl_se_form_1">Maybe</label><br /><input id="ctl10_rpControls_ctl02_fiControl_se_form_2" type="radio" name="ctl10$rpControls$ctl02$fiControl$se_form" value="No" /><label for="ctl10_rpControls_ctl02_fiControl_se_form_2">No</label></span></div>
+	</fieldset>   
+</div>
+          
+			
+				<div class="sc-element-container sc-textarea generic-form-textarea">
+   <div class="sc-label"><label for='ctl10_rpControls_ctl03_fiControl_se_form'>How can we improve this page?</label></div>
+   <div class="sc-description"></div>
+   <div class="sc-form-control"><textarea name="ctl10$rpControls$ctl03$fiControl$se_form" rows="2" cols="20" id="ctl10_rpControls_ctl03_fiControl_se_form" class="generic-form-textarea" maxlength="1000">
+</textarea></div>
+</div>
+          
+			
+				<div class="sc-element-container sc-textbox generic-form-textbox">
+   <div class="sc-label"><label for='ctl10_rpControls_ctl04_fiControl_se_form'>Email address</label></div>
+   <div class="sc-description"></div>
+   <div class="sc-form-control"><input name="ctl10$rpControls$ctl04$fiControl$se_form" type="text" maxlength="300" id="ctl10_rpControls_ctl04_fiControl_se_form" class="generic-form-textbox" autocomplete="email" /></div>
+</div>
+          
+			
+		<div id="ctl10_pnlCaptcha">
+	
+		    <div class="sc-element-container sc-captcha">
+	<fieldset>
+	<legend>
+	   <div class="sc-captcha-description"><span class="sc-captcha-description-text">Type the characters you see in the image below<span><span class="se-form-required-asterisk"> * </span> <span class="se-form-required-text">(Required)</span></div>
+   </legend>
+   <div class="sc-captcha-image">
+   	<div id="ctl10_CAPTCHA_Image" class="RadCaptcha RadCaptcha_Default  CaptchaImageDiv">
+		<!-- 2020.1.114.45 -->&nbsp;<div id="ctl10_CAPTCHA_Image_SpamProtectorPanel" class="CaptchaImageDiv">
+			<div id="ctl10_CAPTCHA_Image_ctl01">
+				<img id="ctl10_CAPTCHA_Image_CaptchaImageUP" alt="Type the letters in the image or Type the first letter of the words spoken in the audio." src="../../../Telerik.Web.UI.WebResource.axd?type=rca&amp;isc=true&amp;guid=f6108e4d-b4fc-4b2e-9606-08748a870a07" height="50" width="180" border="0" style="display:block;" /><a id="ctl10_CAPTCHA_Image_CaptchaLinkButton" class="rcRefreshImage" title="Generate new image" href="javascript:__doPostBack(&#39;ctl10$CAPTCHA_Image$CaptchaLinkButton&#39;,&#39;&#39;)" style="display:block;">Generate new image</a><span style='display:none;'>&nbsp;</span><a href="../../../Telerik.Web.UI.WebResource.axd?type=cah&amp;isc=true&amp;guid=f6108e4d-b4fc-4b2e-9606-08748a870a07" id="ctl10_CAPTCHA_Image_CaptchaAudioCodeUP" title="Read aloud" class="rcCaptchaAudioLink" style="display:block;">Read aloud</a>
+			</div>
+		</div><input id="ctl10_CAPTCHA_Image_ClientState" name="ctl10_CAPTCHA_Image_ClientState" type="hidden" />
+	</div>
+   </div>
+   <div class="sc-captcha-input"><label for="ctl10_CAPTCHA_Input" class="visuallyhidden">Please enter the text in the image</label><input name="ctl10$CAPTCHA_Input" type="text" maxlength="5" id="ctl10_CAPTCHA_Input" /></div>
+   </fieldset>
+</div>
+          
+		
+</div>
+		<div class="sc-form-submit-row">
+	<div class="sc-form-submit-button-container">
+		<input type="submit" name="ctl10$ctl00" value="Submit Feedback" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl10$ctl00&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" />
+	</div>
+	<div class="sc-form-clear-button-container">
+		<input type="reset" value="Cancel">
+	</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  if(typeof(OpenCities.SeamlessForms.init) == "function")
+  {
+	  OpenCities.SeamlessForms.init();
+  }
+});
+</script>
+          
+	</div>
+	
+	
+</div>
+                            
+							            </div>
+						            </div>
+					            </div>
+                        
+                            </div>
+                        </div>
+                        <div class="back-to-top-container text-center">
+                            <a href="#body-top" id="back-to-top"><i aria-hidden="true"></i><span class="js-visuallyhidden">Back to top</span></a>
+                        </div>
+                </div>
+            </div><!--groupTemplateEnd-->
+            <footer>
+                
+                    <div class="footer-outer-container footer-first-row">
+                        <div class="footer-container clearfix">
+                            <div class="grid grid-pad">
+                                <div class="col-xs-12 col-s-12 col-m-4 col-lg-3 footer-logo" >
+	
+			<h2 class="visuallyhidden">Site Footer</h2>
+			<h3 class="footer-title">Footer Logo</h3>
+			
+	<p><a href="https://www.ulstercountyny.gov/Home"><img alt="Footer Seal" src="/files/sharedassets/countysite/v/1/footer-logo/footer-seal.png?w=220&amp;h=220" /></a></p>
+
+
+	<ul class="footer-links with-icons ">   </ul>
+	
+</div><div class="col-xs-12 col-s-12 col-m-4 col-lg-3 contact-container" >
+	
+			<h2 class="visuallyhidden">Site Footer</h2>
+			<h3 class="footer-title">Contact Us</h3>
+			
+	<p>244 Fair Street, PO Box 1800<br />
+Kingston, NY 12402</p>
+<p>Phone: <a href="tel:8453403000">(845) 340-3000</a></p>
+
+
+	<ul class="footer-links with-icons contact-list">   </ul>
+	
+</div><div class="col-xs-12 col-s-12 col-m-4 col-lg-3 quicklink-container" >
+	
+			<h2 class="visuallyhidden">Site Footer</h2>
+			<h3 class="footer-title">Quick Links</h3>
+			
+	
+	<ul class="footer-links with-icons quicklink-list">  <li class="footer-link-">
+	<a href="https://public.govdelivery.com/accounts/NYULSTCO/subscriber/new?qsp=NYULSTCO_2" target="_blank"  >
+<i aria-hidden="true"></i>Newsletter Signup
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.ulstercountyny.gov/Departments" target="_self"  >
+<i aria-hidden="true"></i>Find a Department
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.ulstercountyny.gov/Departments/Emergency-Services" target="_self"  >
+<i aria-hidden="true"></i>Emergency Services
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.ulstercountyny.gov/Government/News/Newsroom" target="_blank"  >
+<i aria-hidden="true"></i>Press Releases
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.ulstercountyny.gov/Government/Transparency/FOIL-Information" target="_blank"  >
+<i aria-hidden="true"></i>FOIL
+</a>
+</li>
+           </ul>
+	
+</div><div class="col-xs-12 col-s-12 col-m-4 col-lg-3 social-container" >
+	
+			<h2 class="visuallyhidden">Site Footer</h2>
+			<h3 class="footer-title">Stay Connected</h3>
+			
+	
+	<ul class="footer-links with-icons social-list">  <li class="footer-link-social-icon-facebook">
+	<a href="https://www.facebook.com/UlsterNY" target="_self"  >
+<i aria-hidden="true"></i>Like us on Facebook
+</a>
+</li>
+          <li class="footer-link-social-icon-instagram">
+	<a href="https://www.instagram.com/ulsterny/" target="_self"  >
+<i aria-hidden="true"></i>Follow us on Instagram
+</a>
+</li>
+          <li class="footer-link-social-icon-smugmug">
+	<a href="https://bsky.app/profile/ulsterny.bsky.social" target="_self"  >
+<i aria-hidden="true"></i>Follow us on BlueSky
+</a>
+</li>
+          <li class="footer-link-social-icon-participate">
+	<a href="https://participate.ulstercountyny.gov/" target="_self"  >
+<i aria-hidden="true"></i>Participate Ulster
+</a>
+</li>
+           </ul>
+	
+</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="footer-outer-container footer-second-row">
+                    <div class="footer-container clearfix">
+                        <div class="grid grid-pad footer-secondary-links">
+                            <div class="col-xs-12 col-m-7">
+                                
+                                    <div><a href="https://www.ulstercountyny.gov/Policies/IT/Privacy-Policy" target="_self"  >Privacy Statement</a>&nbsp;| <a href="https://www.ulstercountyny.gov/Government/Agencies" target="_self"  >Departments & Agencies A-Z</a>&nbsp;| <a href="https://www.ulstercountyny.gov/Initiatives/Broadening-Our-Reach/New-Website/Website-Feedback" target="_blank"  >Website Feedback Form</a></div>
+                                
+                            </div>
+                            <div class="col-xs-12 col-m-5 powered-by">
+                                <div class="right">
+                                    &copy; 2026 Ulster County&nbsp;|&nbsp;<span class="powered-by">Powered by <a href="https://granicus.com/solution/govaccess/opencities/" target="_blank">Granicus</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/files/oc-resources/b9015858-988c-48a4-9473-7c193df083e4/JsTextSnippets.js?ocsvclang=en-US" type="text/javascript"></script><script></script>
+    
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08S9NR7T8Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-08S9NR7T8Y');
+</script>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl04_seamless_script_manager_TSM');Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadCaptcha, {"_audioUrl":"/Telerik.Web.UI.WebResource.axd?type=cah\u0026isc=true\u0026guid=f6108e4d-b4fc-4b2e-9606-08748a870a07","_enableAudio":true,"_persistCode":false,"clientStateFieldID":"ctl10_CAPTCHA_Image_ClientState"}, null, null, $get("ctl10_CAPTCHA_Image"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

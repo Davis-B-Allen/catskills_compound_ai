@@ -1,10 +1,15 @@
 import os, math
+from pathlib import Path
 import vtk
 from PIL import Image
 from shapely.geometry import Polygon
 from shapely.ops import unary_union, triangulate
 
-OUT=os.environ.get('CATSKILLS_CRUDE_OUT','/mnt/data/catskills_handoff/generated_crude')
+REPO_ROOT = Path(__file__).resolve().parents[3]
+OUT = os.environ.get(
+    'CATSKILLS_CRUDE_OUT',
+    str(REPO_ROOT / 'sources' / 'images' / 'generated' / 'crude'),
+)
 os.makedirs(OUT,exist_ok=True)
 
 CX,CZ=56.5,49.0

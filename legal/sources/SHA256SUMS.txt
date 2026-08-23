@@ -1,0 +1,9 @@
+e0e1f51d26bc8075a7bf1f0f06b54870c44f0908c9e76f395e825528d966d4d0  hardenburgh/building-permit-application-2024.pdf
+601c56cafdf3fb6c02143422075a721fff7091c2a7a0d5f4250d1ec539dab259  hardenburgh/zoning-index.html
+27fa18731f7082281096153fd18e7c14cd3dd0bfc20fa263fc7e98780e91ec6f  hardenburgh/zoning-law-appendix-a.pdf
+1e15bf0867383ff93c2d950435af7ee9bf1ae798d608cac783194f36ff8b6e82  hardenburgh/zoning-law-part-1.pdf
+41947297d4cc32130c2d6e67cae08912a5cd977ea1452f1f89d1c479d8ed5774  hardenburgh/zoning-law-part-2.pdf
+6b43fc4c986be7fb4f7e2cbced6d3d10c2f1f39d3cded5b6797dde30ac63cc6d  hardenburgh/zoning-law-part-3.pdf
+784b81698ac789d8a6fcb8a06ebff3df9166c95905f6893c1744f53f8bb82b64  new-york-state/19-nycrr-part-1203.pdf
+92d8f1e53846313202d0c9f10cf7ca52424744d1980f318adfbc776c8bf99d53  new-york-state/2025-residential-code-of-new-york-state.pdf
+0d065320d9bbf13b798047edb34da540aff9c33b5c0fd10fef20d6875d856a43  ulster-county/adu-guide.html

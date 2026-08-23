@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Agentically"
+  short_description: "Guide agent-driven compound planning work"
+  default_prompt: "Use $how-to-work-agentic to explain how I can advance this compound proposal with a coding agent."

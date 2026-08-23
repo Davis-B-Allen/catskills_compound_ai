@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work in Web Chat"
+  short_description: "Prepare assets and prompts for web chat"
+  default_prompt: "Use $how-to-work-chat to prepare my next compound-planning conversation in a web chatbot."
