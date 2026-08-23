@@ -1,0 +1,463 @@
+{
+  "coordinate_system": {
+    "site_source_coordinates": "+X east, +Z north, +Y up; feet",
+    "center_translation": {
+      "x": -56.5,
+      "y": 0,
+      "z": -49.0
+    },
+    "centered_world_coordinates": "site X-56.5, site Z-49.0",
+    "display_orientation": "All accepted top-down and perspective stills are horizontally mirrored after rendering so north is up and east is right in the displayed architectural convention."
+  },
+  "buildings": {
+    "main_tiny_home": {
+      "stage": 1,
+      "x": 40,
+      "z": 72,
+      "width_x": 24,
+      "depth_z": 20,
+      "wall_height": 8.5,
+      "roof_rise": 2.7,
+      "area_sf": 480
+    },
+    "bathhouse": {
+      "stage": 4,
+      "x": 14,
+      "z": 38,
+      "width_x": 16,
+      "depth_z": 16,
+      "wall_height": 8,
+      "roof_rise": 2.7,
+      "area_sf": 256,
+      "orientation": "courtyard-facing east wall; sauna glass on northern part of east wall, shower portion south is solid"
+    },
+    "adu": {
+      "stage": 6,
+      "x": 52,
+      "z": 10,
+      "width_x": 22,
+      "depth_z": 20,
+      "wall_height": 8.2,
+      "roof_rise": 2.7,
+      "area_sf": 440
+    },
+    "guest_cabin": {
+      "stage": 7,
+      "x": 31,
+      "z": 12,
+      "width_x": 16,
+      "depth_z": 12,
+      "wall_height": 7.7,
+      "roof_rise": 2.7,
+      "area_sf": 192
+    },
+    "outdoor_kitchen": {
+      "stage": 8,
+      "x": 81,
+      "z": 41,
+      "width_x": 18,
+      "depth_z": 16,
+      "post_height": 8,
+      "roof_rise": 2.7,
+      "orientation": "open front faces west/inward toward firepit courtyard"
+    }
+  },
+  "deck_polygons": {
+    "stage_2": [
+      [
+        36,
+        64
+      ],
+      [
+        68,
+        64
+      ],
+      [
+        68,
+        72
+      ],
+      [
+        36,
+        72
+      ]
+    ],
+    "stage_4": [
+      [
+        10,
+        30
+      ],
+      [
+        38,
+        30
+      ],
+      [
+        38,
+        58
+      ],
+      [
+        40,
+        58
+      ],
+      [
+        40,
+        72
+      ],
+      [
+        36,
+        72
+      ],
+      [
+        36,
+        64
+      ],
+      [
+        30,
+        64
+      ],
+      [
+        30,
+        58
+      ],
+      [
+        10,
+        58
+      ]
+    ],
+    "stage_6a": [
+      [
+        38,
+        26
+      ],
+      [
+        78,
+        26
+      ],
+      [
+        78,
+        34
+      ],
+      [
+        74,
+        34
+      ],
+      [
+        74,
+        36
+      ],
+      [
+        48,
+        36
+      ],
+      [
+        48,
+        34
+      ],
+      [
+        38,
+        34
+      ]
+    ],
+    "stage_6b": [
+      [
+        48,
+        6
+      ],
+      [
+        78,
+        6
+      ],
+      [
+        78,
+        34
+      ],
+      [
+        48,
+        34
+      ]
+    ],
+    "stage_7": [
+      [
+        26,
+        8
+      ],
+      [
+        50,
+        8
+      ],
+      [
+        50,
+        34
+      ],
+      [
+        38,
+        34
+      ],
+      [
+        38,
+        30
+      ],
+      [
+        26,
+        30
+      ]
+    ],
+    "stage_8a": [
+      [
+        77,
+        37
+      ],
+      [
+        103,
+        37
+      ],
+      [
+        103,
+        64
+      ],
+      [
+        68,
+        64
+      ],
+      [
+        68,
+        58
+      ],
+      [
+        77,
+        58
+      ]
+    ],
+    "stage_8b": [
+      [
+        68,
+        34
+      ],
+      [
+        78,
+        34
+      ],
+      [
+        78,
+        64
+      ],
+      [
+        68,
+        64
+      ]
+    ]
+  },
+  "firepit": {
+    "stage": 3,
+    "center": [
+      54,
+      50
+    ],
+    "gravel_pad_radius": 10.5,
+    "stone_ring_major_radius": 2.15,
+    "ring_cross_section_radius": 0.55
+  },
+  "stage_5_spa": {
+    "cold_plunge": {
+      "x": 31.3,
+      "z": 39,
+      "width_x": 4.2,
+      "depth_z": 5,
+      "height": 1.45
+    },
+    "wood_fired_hot_tub": {
+      "center": [
+        25.5,
+        34.6
+      ],
+      "outer_radius": 3.25,
+      "height": 1.65,
+      "relationship": "south and slightly west of cold plunge; bathhouse deck envelops both"
+    }
+  },
+  "stage_5_seating_angles_deg": [
+    15,
+    70,
+    125,
+    195,
+    250,
+    310
+  ],
+  "cameras": {
+    "top_down": {
+      "position": [
+        0,
+        120,
+        0
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "projection": "orthographic",
+      "orthographic_bounds": [
+        -56,
+        56,
+        -50,
+        50
+      ],
+      "vtk_parallel_scale": 50,
+      "reference_output_px": [
+        1120,
+        1000
+      ]
+    },
+    "perspectives": {
+      "1": {
+        "position": [
+          -4,
+          16.79,
+          1.28
+        ],
+        "target": [
+          -4,
+          2,
+          33
+        ],
+        "fov_deg": 44
+      },
+      "2": {
+        "position": [
+          -4,
+          20.07,
+          -5.99
+        ],
+        "target": [
+          -4,
+          2,
+          28
+        ],
+        "fov_deg": 45
+      },
+      "3": {
+        "position": [
+          23.83,
+          29.46,
+          -30.73
+        ],
+        "target": [
+          -2,
+          2,
+          14
+        ],
+        "fov_deg": 46
+      },
+      "4": {
+        "position": [
+          23.83,
+          33.45,
+          -33.83
+        ],
+        "target": [
+          -18,
+          2,
+          8
+        ],
+        "fov_deg": 48
+      },
+      "5": {
+        "position": [
+          25.99,
+          35.14,
+          -46.99
+        ],
+        "target": [
+          -20,
+          2,
+          -1
+        ],
+        "fov_deg": 48
+      },
+      "6": {
+        "position": [
+          32.65,
+          42.8,
+          -71.55
+        ],
+        "target": [
+          0,
+          2,
+          -15
+        ],
+        "fov_deg": 50
+      },
+      "7": {
+        "position": [
+          -8,
+          28,
+          -70
+        ],
+        "target": [
+          -8,
+          2,
+          -15
+        ],
+        "fov_deg": 58
+      },
+      "8": {
+        "position": [
+          -74,
+          30,
+          -8
+        ],
+        "target": [
+          18,
+          2,
+          1
+        ],
+        "fov_deg": 58
+      }
+    }
+  },
+  "stages": {
+    "1": [
+      "main_tiny_home"
+    ],
+    "2": [
+      "main_tiny_home",
+      "main_courtyard_deck"
+    ],
+    "3": [
+      "main_tiny_home",
+      "main_courtyard_deck",
+      "firepit_pad",
+      "fire_ring"
+    ],
+    "4": [
+      "prior",
+      "bathhouse",
+      "bathhouse_wrap_and_connector_deck"
+    ],
+    "5": [
+      "prior",
+      "firepit_seating",
+      "cold_plunge",
+      "wood_fired_hot_tub"
+    ],
+    "6": [
+      "prior",
+      "adu",
+      "adu_platform_and_south_deck_band"
+    ],
+    "7": [
+      "prior",
+      "guest_cabin",
+      "guest_cabin_deck_fill"
+    ],
+    "8": [
+      "prior",
+      "outdoor_kitchen",
+      "final_east_deck_connection"
+    ]
+  }
+}

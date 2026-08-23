@@ -1,0 +1,220 @@
+<div id="compound3d" class="w-full min-w-0 p-4 sm:p-6">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-semibold">Dimension-faithful staged site model</h2>
+        <p class="mt-1 text-sm opacity-70">Eight orthographic top-down renders of one fixed 3D master model. Each stage only reveals components that have been built by that point.</p>
+      </div>
+      <div class="text-xs opacity-70">+Z = north • +X = east • dimensions in feet</div>
+    </div>
+
+    <div class="mb-5 rounded-xl border border-black/10 bg-black/5 p-3 text-sm">
+      <strong>Locked geometry:</strong>
+      <span class="opacity-70"> Main tiny home 24×20 (480 sf); bathhouse 16×16; ADU 22×20 (440 sf); guest cabin 16×12. The bathhouse is rotated on site so its sauna/shower façade faces east into the courtyard: sauna glass occupies the northern portion of that courtyard-facing wall and the shower portion remains solid. The cold plunge sits immediately east of the southern/shower portion; the wood-fired hot tub is south and slightly west of the plunge. The ADU and guest cabin are shifted slightly north and east, the firepit is re-centered within the overall building group, and the completed deck is one continuous rectilinear circulation system enclosing the courtyard, with generous platforms around the bathhouse, spa tubs, ADU, guest cabin, and outdoor kitchen.</span>
+    </div>
+
+    <div class="grid gap-5 lg:grid-cols-2">
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 1 — Principal tiny home</h3><p class="mb-2 text-sm opacity-65">Main 480-sf dwelling only.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-1" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 1 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 2 — Main courtyard deck</h3><p class="mb-2 text-sm opacity-65">Adds one clean deck component to the courtyard side of the tiny home.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-2" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 2 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 3 — Firepit</h3><p class="mb-2 text-sm opacity-65">Adds the flat gravel firepit pad and stone fire ring; seating comes later.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-3" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 3 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 4 — Bathhouse + connecting deck</h3><p class="mb-2 text-sm opacity-65">Adds the 16×16 bathhouse and a single wrap/connector deck component.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-4" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 4 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 5 — Seating + cold plunge + wood-fired hot tub</h3><p class="mb-2 text-sm opacity-65">Improves the firepit area and adds both spa tubs on the existing bathhouse deck.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-5" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 5 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 6 — ADU + south deck connection</h3><p class="mb-2 text-sm opacity-65">Adds the 440-sf ADU on the southeast side of the courtyard, with a broad straight deck band joining it to the compound.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-6" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 6 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 7 — Guest cabin + deck</h3><p class="mb-2 text-sm opacity-65">Adds the 16×12 guest cabin between the bathhouse and ADU, using the same clean south deck band.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-7" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 7 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 8 — Outdoor kitchen + final deck</h3><p class="mb-2 text-sm opacity-65">Adds the covered open-air kitchen/bar and its final clean deck connection.</p><div class="relative overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="stage-8" class="block w-full" style="aspect-ratio:56/50; transform:scaleX(-1)" aria-label="Stage 8 overhead site model"></canvas><span class="pointer-events-none absolute right-2 top-2 rounded bg-white/80 px-2 py-1 text-[10px] font-medium text-black">N ↑ &nbsp; E →</span></div></section>
+    </div>
+
+    <div class="mt-8 mb-4">
+      <h2 class="text-xl font-semibold">Stage-specific perspective views</h2>
+      <p class="mt-1 text-sm opacity-70">Each camera is fixed to emphasize the element introduced in that stage while retaining enough of the already-built compound to show its spatial context. These views use the exact same staged 3D model and geometry as the overhead plans.</p>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-2">
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 1 — Principal tiny home</h3><p class="mb-2 text-sm opacity-65">A south-courtyard approach view establishes the principal dwelling and future compound axis.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-1" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 1 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 2 — Main courtyard deck</h3><p class="mb-2 text-sm opacity-65">Low oblique view from the south, placing the new deck in the foreground against the tiny home.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-2" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 2 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 3 — Firepit</h3><p class="mb-2 text-sm opacity-65">South-east courtyard view centered on the new firepit, with the main home and deck behind it.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-3" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 3 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 4 — Bathhouse + connecting deck</h3><p class="mb-2 text-sm opacity-65">Courtyard-side view toward the bathhouse, specifically exposing its east-facing sauna/shower façade and the new deck connection back to the main home.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-4" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 4 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 5 — Seating + plunge + hot tub</h3><p class="mb-2 text-sm opacity-65">Closer courtyard-side composition focusing on the cold plunge and wood-fired hot tub, with the bathhouse and firepit seating remaining legible.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-5" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 5 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 6 — ADU + south deck connection</h3><p class="mb-2 text-sm opacity-65">South-east approach puts the new ADU in the foreground while preserving the courtyard, firepit, bathhouse and main-home context.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-6" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 6 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 7 — Guest cabin + deck</h3><p class="mb-2 text-sm opacity-65">Front-facing southern view centers the new guest cabin, with the ADU visible to one side and the bathhouse/spa zone visible to the other.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-7" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 7 perspective model view"></canvas></div></section>
+      <section class="rounded-xl border border-black/10 bg-black/5 p-3"><h3 class="font-medium">Stage 8 — Outdoor kitchen + final deck</h3><p class="mb-2 text-sm opacity-65">Courtyard-facing view from the west/southwest side shows the open front of the new kitchen/bar facing the firepit, while retaining the central compound in frame.</p><div class="overflow-hidden rounded-lg bg-[#d8d1c1]"><canvas id="perspective-8" class="block w-full" style="aspect-ratio:16/10; transform:scaleX(-1)" aria-label="Stage 8 perspective model view"></canvas></div></section>
+    </div>
+    <p id="model-status" class="mt-4 text-xs opacity-60" aria-live="polite">Loading staged 3D model…</p>
+  </div>
+</div>
+<script type="module">
+const root=document.getElementById('compound3d');
+if(!root.dataset.ready){
+root.dataset.ready='1';
+const status=document.getElementById('model-status');
+try{
+  const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.178.0/+esm');
+  const scene=new THREE.Scene();
+  scene.background=new THREE.Color(0xd8d1c1);
+  scene.fog=null;
+  // Keep all modeled/site geometry in one translated root. Centering the master
+  // compound at world origin makes the overhead camera mathematically trivial
+  // and prevents the positive-coordinate site from drifting into one quadrant.
+  const modelRoot=new THREE.Group();
+  scene.add(modelRoot);
+
+  const mats={
+    siding:new THREE.MeshStandardMaterial({color:0x252726,roughness:.92}),
+    roof:new THREE.MeshStandardMaterial({color:0x171a1b,roughness:.72,metalness:.12}),
+    deck:new THREE.MeshStandardMaterial({color:0xa97d52,roughness:.9}),
+    deckEdge:new THREE.MeshStandardMaterial({color:0x765137,roughness:.9}),
+    glass:new THREE.MeshStandardMaterial({color:0xd7a85d,emissive:0x6b411c,emissiveIntensity:.55,roughness:.25,transparent:true,opacity:.92}),
+    water:new THREE.MeshStandardMaterial({color:0x72a6b2,roughness:.18,metalness:.05,transparent:true,opacity:.88}),
+    stone:new THREE.MeshStandardMaterial({color:0x696761,roughness:1}),
+    gravel:new THREE.MeshStandardMaterial({color:0x8d8a82,roughness:1}),
+    wood:new THREE.MeshStandardMaterial({color:0x765339,roughness:.93}),
+    metal:new THREE.MeshStandardMaterial({color:0x303335,roughness:.65,metalness:.35}),
+    tree:new THREE.MeshStandardMaterial({color:0x40533c,roughness:1}),
+    trunk:new THREE.MeshStandardMaterial({color:0x4b3929,roughness:1}),
+    ground:new THREE.MeshStandardMaterial({color:0xaaa28b,roughness:1})
+  };
+
+  const staged=[];
+  function addStage(obj,minStage=0){obj.userData.minStage=minStage;staged.push(obj);modelRoot.add(obj);return obj;}
+  const ground=new THREE.Mesh(new THREE.PlaneGeometry(108,98),mats.ground); ground.rotation.x=-Math.PI/2; ground.position.set(55,-.03,49); ground.receiveShadow=true; addStage(ground,0);
+
+  function box(x,z,w,d,h,mat,y=.25,minStage=0){const g=new THREE.BoxGeometry(w,h,d);const m=new THREE.Mesh(g,mat);m.position.set(x+w/2,y+h/2,z+d/2);m.castShadow=true;m.receiveShadow=true;return addStage(m,minStage);}
+  function roof(x,z,w,d,eave,rise,minStage=0){
+    const slope=Math.sqrt((d/2)*(d/2)+rise*rise);
+    const angle=Math.atan2(rise,d/2);
+    const north=new THREE.Mesh(new THREE.BoxGeometry(w+.5,.28,slope+.35),mats.roof);
+    north.position.set(x+w/2,eave+rise/2+.2,z+d*.75);north.rotation.x=angle;north.castShadow=true;addStage(north,minStage);
+    const south=new THREE.Mesh(new THREE.BoxGeometry(w+.5,.28,slope+.35),mats.roof);
+    south.position.set(x+w/2,eave+rise/2+.2,z+d*.25);south.rotation.x=-angle;south.castShadow=true;addStage(south,minStage);
+  }
+  function building(x,z,w,d,h,type,minStage){box(x,z,w,d,h,mats.siding,.2,minStage);roof(x,z,w,d,h+.2,2.7,minStage);
+    if(type==='bath'){
+      // Site rotation: the 16' plan's sauna/shower façade faces EAST into the courtyard.
+      // Sauna glazing occupies the NORTHERN portion of this east wall; the southern shower portion stays solid.
+      box(x+w+.05,z+d*.53,.12,d*.40,5.3,mats.glass,1.5,minStage);
+    } else if(type==='main'){
+      box(x+1.7,z-.12,w-3.4,.12,5.5,mats.glass,1.35,minStage);
+    } else if(type==='adu'){
+      box(x+2,z+d+.05,w-4,.12,5.3,mats.glass,1.45,minStage);
+    } else if(type==='guest'){
+      box(x+2,z+d+.05,w-4,.12,4.9,mats.glass,1.4,minStage);
+    }
+  }
+  function deckPoly(points,minStage){
+    const s=new THREE.Shape();s.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)s.lineTo(points[i][0],points[i][1]);s.closePath();
+    const geo=new THREE.ExtrudeGeometry(s,{depth:.34,bevelEnabled:false});
+    const mesh=new THREE.Mesh(geo,mats.deck);mesh.rotation.x=Math.PI/2;mesh.position.y=.38;mesh.castShadow=true;mesh.receiveShadow=true;return addStage(mesh,minStage);
+  }
+
+  // Stage 1 — principal 480-sf tiny home.
+  building(40,72,24,20,8.5,'main',1);
+
+  // Stage 2 — one clean main courtyard deck component.
+  // This intentionally establishes a broad straight south edge that later stages can tie into.
+  deckPoly([[36,64],[68,64],[68,72],[36,72]],2);
+
+  // Stage 4 — one generous bathhouse/spa platform plus a solid straight connector to the main deck.
+  // The platform fully envelops the bathhouse footprint and the future cold-plunge / hot-tub locations.
+  deckPoly([[10,30],[38,30],[38,58],[40,58],[40,72],[36,72],[36,64],[30,64],[30,58],[10,58]],4);
+  building(14,38,16,16,8,'bath',4);
+
+  // Stage 6 — ADU platform and a broad, straight south-side deck band.
+  // The band joins the bathhouse platform continuously and begins the eventual deck ring around the courtyard.
+  deckPoly([[38,26],[78,26],[78,34],[74,34],[74,36],[48,36],[48,34],[38,34]],6);
+  deckPoly([[48,6],[78,6],[78,34],[48,34]],6);
+  building(52,10,22,20,8.2,'adu',6);
+
+  // Stage 7 — guest-cabin platform fills the remaining southwest portion of the south deck band.
+  // It joins flush to both the bathhouse platform and the ADU deck, keeping the courtyard edge straight.
+  deckPoly([[26,8],[50,8],[50,34],[38,34],[38,30],[26,30]],7);
+  building(31,12,16,12,7.7,'guest',7);
+
+  // Outdoor kitchen — open west/courtyard face.
+  const kx=81,kz=41,kw=18,kd=16,kh=8;
+  // Stage 8 — outdoor-kitchen platform and a deliberately broad east-side connector.
+  // Together with the earlier south and west bands, this closes a single contiguous deck loop around the firepit courtyard.
+  deckPoly([[77,37],[103,37],[103,64],[68,64],[68,58],[77,58]],8);
+  deckPoly([[68,34],[78,34],[78,64],[68,64]],8);
+  [[kx,kz],[kx+kw,kz],[kx,kz+kd],[kx+kw,kz+kd]].forEach(([x,z])=>box(x-.18,z-.18,.36,.36,kh,mats.wood,.2,8));
+  roof(kx,kz,kw,kd,kh+.2,2.7,8);
+  box(kx+kw-3,kz+2,2.2,kd-4,3,mats.wood,.22,8); box(kx+2,kz+.8,kw-4,2,3,mats.wood,.22,8);
+  box(kx+kw-2.7,kz+4,1.8,3.5,1.2,mats.metal,3.22,8); box(kx+kw-2.7,kz+10,1.8,3.2,1.6,mats.metal,3.22,8);
+  [85,89,93,96].forEach(x=>box(x,40.2,.7,.7,1.8,mats.wood,.2,8));
+
+  // Firepit — flat courtyard, not sunken.
+  const fireX=54,fireZ=50;
+  const pad=new THREE.Mesh(new THREE.CylinderGeometry(10.5,10.5,.12,64),mats.gravel);pad.position.set(fireX,.08,fireZ);pad.receiveShadow=true;addStage(pad,3);
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(2.25,.58,12,48),mats.stone);ring.rotation.x=Math.PI/2;ring.position.set(fireX,.55,fireZ);ring.castShadow=true;addStage(ring,3);
+  const flame=new THREE.Mesh(new THREE.ConeGeometry(.6,1.8,10),new THREE.MeshStandardMaterial({color:0xe87528,emissive:0xb64b12,emissiveIntensity:1.6}));flame.position.set(fireX,1.2,fireZ);addStage(flame,3);
+  [15,70,125,195,250,310].forEach(a=>{const r=7.2,rad=a*Math.PI/180;box(fireX+r*Math.cos(rad)-.8,fireZ+r*Math.sin(rad)-.45,1.6,.9,.6,mats.wood,.08,5)});
+
+  // Cold plunge — east of bathhouse east wall, southern half.
+  box(31.3,39,4.2,5,1.45,mats.metal,.28,5); box(31.65,39.35,3.5,4.3,.08,mats.water,1.72,5);
+  // Wood-fired hot tub — south and slightly west of cold plunge; overlaps bathhouse E-W span.
+  const tubOuter=new THREE.Mesh(new THREE.CylinderGeometry(3.25,3.25,1.65,48),mats.wood);tubOuter.position.set(25.5,1.05,34.6);addStage(tubOuter,5);
+  const tubWater=new THREE.Mesh(new THREE.CylinderGeometry(2.6,2.6,.08,48),mats.water);tubWater.position.set(25.5,1.9,34.6);addStage(tubWater,5);
+  box(21.15,33.8,.9,1.6,1.8,mats.metal,.25,5); box(21.5,34.35,.22,.22,4.4,mats.metal,1.8,5);
+
+  // Perimeter trees only: preserve a relatively flat, uncomplicated clearing.
+  function tree(x,z,s=.8){box(x-.12,z-.12,.24,.24,5.2*s,mats.trunk,0,0);const cone=new THREE.Mesh(new THREE.ConeGeometry(1.25*s,4.2*s,9),mats.tree);cone.position.set(x,4.5*s,z);addStage(cone,0)}
+  for(let x=4;x<=106;x+=7){tree(x,3,.8+(x%3)*.05);tree(x,95,.8+((x+1)%3)*.05)}
+  for(let z=10;z<92;z+=8){tree(4,z,.82);tree(106,z,.88)}
+
+  // Final Stage-8 developed footprint is approximately X=10..103, Z=6..92.
+  // Translate its center (56.5,49) to the world origin. Every stage therefore
+  // occupies the exact same fixed plan window, regardless of which objects are visible.
+  modelRoot.position.set(-56.5,0,-49);
+  modelRoot.updateMatrixWorld(true);
+
+  scene.add(new THREE.HemisphereLight(0xfff1d1,0x6b7167,2.1));
+  const sun=new THREE.DirectionalLight(0xffe0a3,3.0);sun.position.set(-35,70,85);sun.castShadow=true;scene.add(sun);
+  const fill=new THREE.DirectionalLight(0xb8d3df,1.2);fill.position.set(75,35,-40);scene.add(fill);
+
+  // All stage panels use the exact same full-compound framing and a true vertical camera.
+  // The master model is centered at world origin, so there is no camera pan or orbit state at all.
+  // A display-only horizontal mirror converts the camera's north-up/west-right view into
+  // architectural plan orientation: north up and east right.
+  const configs={};
+  for(let stage=1;stage<=8;stage++)configs['stage'+stage]={canvas:'stage-'+stage,stage,mode:'overhead'};
+  // Perspective camera positions are specified in centered world coordinates after the master-model translation.
+  // Perspective canvases are display-mirrored so their east/west orientation matches the architectural
+  // top-down views, which are likewise mirrored for north-up / east-right plan orientation.
+  // Each view deliberately focuses on the new stage element while retaining contextual portions of earlier work.
+  Object.assign(configs,{
+    perspective1:{canvas:'perspective-1',stage:1,mode:'perspective',pos:[-4,16.79,1.28],target:[-4,2,33],fov:44},
+    perspective2:{canvas:'perspective-2',stage:2,mode:'perspective',pos:[-4,20.07,-5.99],target:[-4,2,28],fov:45},
+    perspective3:{canvas:'perspective-3',stage:3,mode:'perspective',pos:[23.83,29.46,-30.73],target:[-2,2,14],fov:46},
+    perspective4:{canvas:'perspective-4',stage:4,mode:'perspective',pos:[23.83,33.45,-33.83],target:[-18,2,8],fov:48},
+    perspective5:{canvas:'perspective-5',stage:5,mode:'perspective',pos:[25.99,35.14,-46.99],target:[-20,2,-1],fov:48},
+    perspective6:{canvas:'perspective-6',stage:6,mode:'perspective',pos:[32.65,42.80,-71.55],target:[0,2,-15],fov:50},
+    perspective7:{canvas:'perspective-7',stage:7,mode:'perspective',pos:[-8,28,-70],target:[-8,2,-15],fov:58},
+    perspective8:{canvas:'perspective-8',stage:8,mode:'perspective',pos:[-74,30,-8],target:[18,2,1],fov:58}
+  });
+  const rigs={};
+  function makeRig(key,cfg){
+    const canvas=document.getElementById(cfg.canvas);
+    const camera=cfg.mode==='perspective'
+      ? new THREE.PerspectiveCamera(cfg.fov||44,1,.1,350)
+      : new THREE.OrthographicCamera(-56,56,50,-50,.1,350);
+    if(cfg.mode==='perspective'){
+      camera.position.set(...cfg.pos);
+      camera.up.set(0,1,0);
+      camera.lookAt(...cfg.target);
+    }else{
+      camera.position.set(0,120,0);
+      camera.up.set(0,0,1);
+      camera.lookAt(0,0,0);
+    }
+    camera.updateProjectionMatrix();
+    camera.updateMatrixWorld(true);
+    const renderer=new THREE.WebGLRenderer({canvas,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+    const rig={canvas,camera,renderer,cfg};rigs[key]=rig;return rig;
+  }
+  Object.entries(configs).forEach(([k,c])=>makeRig(k,c));
+  function resize(r){const rect=r.canvas.getBoundingClientRect();const w=Math.max(320,Math.round(rect.width)),h=Math.max(220,Math.round(rect.height));if(r.canvas.width!==w||r.canvas.height!==h){r.renderer.setSize(w,h,false);if(r.cfg.mode==='perspective'){r.camera.aspect=w/h}else{r.camera.left=-56;r.camera.right=56;r.camera.top=50;r.camera.bottom=-50}r.camera.updateProjectionMatrix()}}
+  function applyStage(n){for(const o of staged)o.visible=(o.userData.minStage||0)<=n;}
+  let raf=0;function loop(){for(const r of Object.values(rigs)){resize(r);applyStage(r.cfg.stage);r.renderer.render(scene,r.camera)}raf=requestAnimationFrame(loop)}loop();
+  status.textContent='Staged master model loaded. The eight plan panels retain one identical locked direct-overhead camera; the eight additional fixed perspective cameras each emphasize the element introduced at that stage while using the same exact geometry.';
+  window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
+}catch(err){status.textContent='The 3D renderer could not initialize in this client. The model geometry remains defined, but WebGL rendering is unavailable here.';console.error(err)}
+}
+</script>

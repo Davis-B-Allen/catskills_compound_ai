@@ -1,0 +1,3 @@
+vtk
+Pillow
+shapely
