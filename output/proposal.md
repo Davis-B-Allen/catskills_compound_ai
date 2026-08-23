@@ -2,7 +2,7 @@
 
 # Catskills Micro-Compound Development Proposal
 
-**Working repository edition - August 2026**
+**Working repository edition - August 2026 · Incremental planning draft**
 
 A staged woodland retreat organized around a compact principal home, shared courtyard, wellness bathhouse, detached accessory dwelling unit, guest sleeping cabin, and outdoor kitchen.
 
