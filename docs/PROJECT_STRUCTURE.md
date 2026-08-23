@@ -117,5 +117,6 @@ For design conflicts, follow the priority order in `README.md`. For legal confli
 ## Collaboration paths
 
 - Repository-aware work: invoke `$how-to-work-agentic` or open `.agents/skills/how-to-work-agentic/SKILL.md`.
+- Interactive change planning: invoke `$help-me-plan` or open `.agents/skills/help-me-plan/SKILL.md`.
 - Separate web chat: invoke `$how-to-work-chat` or open `.agents/skills/how-to-work-chat/SKILL.md`.
 - Human-only editing: change the relevant section, keep source links explicit, and run the two build commands.

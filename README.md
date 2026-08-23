@@ -15,7 +15,7 @@ Start by reading the assembled proposal, then choose a workstream:
 - **Refresh a budget:** replace dated planning assumptions with sourced local estimates, record the estimate date and exclusions, and update both the budget section and affected stages.
 - **Prepare for a professional conversation:** ask an agent to turn open questions into a concise brief for the Town, surveyor, septic designer, architect, engineer, well contractor, or builder.
 
-When working with a repository-aware coding agent, invoke `$how-to-work-agentic` for a tailored menu of tasks. When taking work to a separate browser chatbot, invoke `$how-to-work-chat` for the exact files to upload and a copy-ready starter prompt.
+When working with a repository-aware coding agent, invoke `$how-to-work-agentic` for a tailored menu of tasks, or `$help-me-plan` to collaboratively shape and implement a change. When taking work to a separate browser chatbot, invoke `$how-to-work-chat` for the exact files to upload and a copy-ready starter prompt.
 
 ## Repository map
 
@@ -61,4 +61,3 @@ When project materials disagree, use this order:
 6. prior proposal PDFs and legacy handoff documents for history.
 
 For law and regulation, an official, current source outranks analysis, summaries, private websites, and prior proposal language. Confirm consequential interpretations with the authority having jurisdiction and qualified professionals.
-
